@@ -1,0 +1,296 @@
+{
+  "categories": [
+    {
+      "id": "devops",
+      "icon": "assets/img/icons/server.svg",
+      "projects": [
+        {
+          "name": "Enterprise Server Management",
+          "description": {
+            "en": [
+              "Configured, maintained, and optimized virtual and local servers for business clients across Mexico.",
+              "Implemented and managed Windows Server environments (2003–2016) and Linux virtual machines.",
+              "Installed and configured Microsoft SQL Server (2005–2017) for accounting and Contpaqi systems.",
+              "Provided remote and onsite technical support, backup management, and performance monitoring."
+            ],
+            "es": [
+              "Configuré, administré y optimicé servidores virtuales y locales para clientes empresariales en México.",
+              "Implementé y gestioné entornos de Windows Server (2003–2016) y máquinas virtuales en Linux.",
+              "Realicé instalación y configuración de Microsoft SQL Server (2005–2017) para sistemas contables y Contpaqi.",
+              "Proporcioné soporte técnico remoto y presencial, gestión de respaldos y monitoreo de rendimiento."
+            ]
+          },
+          "technologies": ["Windows Server", "Linux", "SQL Server", "VMware", "Contpaqi"]
+        },
+        {
+          "name": "Infrastructure and Structured Cabling",
+          "description": {
+            "en": [
+              "Designed and implemented structured cabling systems for offices and stores across Chihuahua.",
+              "Ensured network stability and scalability through professional installation and testing.",
+              "Integrated servers, routers, and hardware components for enterprise-level setups."
+            ],
+            "es": [
+              "Diseñé e implementé cableado estructurado para oficinas y tiendas en Chihuahua.",
+              "Aseguré la estabilidad y escalabilidad de las redes mediante instalación y pruebas profesionales.",
+              "Integré servidores, routers y componentes de hardware para entornos empresariales."
+            ]
+          },
+          "technologies": ["Networking", "Cabling", "Hardware Support"]
+        },
+        {
+          "name": "IASA Warehouse Management System",
+          "description": {
+            "en": [
+              "Developed a warehouse and order management system integrated with barcode scanning and Contpaqi invoicing.",
+              "Implemented an AI-powered chatbot connected to product databases for automated quotations and order preparation.",
+              "Increased efficiency and reduced development time through AI-assisted coding."
+            ],
+            "es": [
+              "Desarrollé un sistema de gestión de pedidos y almacén con lector de código de barras y facturación integrada con Contpaqi.",
+              "Implementé un chatbot con inteligencia artificial conectado a la base de datos de productos para cotizaciones y preparación automática de pedidos.",
+              "Aumenté la eficiencia y reduje el tiempo de desarrollo mediante el uso de IA aplicada al desarrollo de software."
+            ]
+          },
+          "technologies": ["Python", "AI", "SQLite", "Flask", "REST API"]
+        }
+      ]
+    },
+    {
+      "id": "software",
+      "icon": "assets/img/icons/code.svg",
+      "projects": [
+        {
+          "name": "Secapsa Internal Management System",
+          "description": {
+            "en": [
+              "Collaborated in the development of Secapsa’s internal management web system.",
+              "Supported IT operations, sales, and Facebook marketing campaigns.",
+              "Gained experience in system integration and user support for company processes."
+            ],
+            "es": [
+              "Colaboré en el desarrollo del sistema de gestión interna de Secapsa.",
+              "Brindé soporte en operaciones de TI, ventas y campañas de marketing en Facebook.",
+              "Adquirí experiencia en integración de sistemas y soporte a usuarios."
+            ]
+          },
+          "technologies": ["HTML", "CSS", "JavaScript", "PHP"]
+        },
+        {
+          "name": "OWM Banking and Accounting Systems",
+          "description": {
+            "en": [
+              "Developed core features for accounting and banking systems.",
+              "Applied security standards and best coding practices.",
+              "Optimized SQL queries and data structures for performance improvements.",
+              "Collaborated with business analysts to ensure accurate implementation of requirements."
+            ],
+            "es": [
+              "Desarrollé funcionalidades clave para sistemas contables y bancarios.",
+              "Apliqué estándares de seguridad y buenas prácticas de programación.",
+              "Optimicé consultas SQL y estructuras de datos para mejorar el rendimiento.",
+              "Colaboré con analistas de negocio para garantizar el cumplimiento de requisitos."
+            ]
+          },
+          "technologies": ["PHP", "JavaScript", "SQL", "Bootstrap"]
+        },
+        {
+          "name": "Sisu Visas Internal Control System",
+          "description": {
+            "en": [
+              "Created internal systems for client and quotation tracking using SQL and Excel macros.",
+              "Automated administrative workflows to improve time efficiency and data accuracy.",
+              "Contributed to system design and IT process optimization."
+            ],
+            "es": [
+              "Creé sistemas internos para el control de clientes y cotizaciones utilizando SQL y macros en Excel.",
+              "Automatizé flujos administrativos para mejorar la eficiencia y precisión de los datos.",
+              "Contribuí al diseño del sistema y la optimización de procesos de TI."
+            ]
+          },
+          "technologies": ["SQL", "Excel Macros", "VBA"]
+        }
+      ]
+    },
+    {
+      "id": "mobile",
+      "icon": "assets/img/icons/mobile.svg",
+      "projects": [
+        {
+          "name": "Construction X App",
+          "description": {
+            "en": [
+              "Led the development of Construction X, a networking platform for construction professionals.",
+              "Designed system architecture and managed a multidisciplinary team using Agile methodologies.",
+              "Developed mobile app in Flutter, integrated with REST APIs and designed UI/UX in Figma.",
+              "Also created web landing and admin panel using PHP, JavaScript, Bootstrap, and HTML."
+            ],
+            "es": [
+              "Lideré el desarrollo de Construction X, una plataforma de conexión para profesionales de la construcción.",
+              "Diseñé la arquitectura del sistema y gestioné un equipo multidisciplinario con metodologías ágiles.",
+              "Desarrollé la aplicación móvil en Flutter, integrada con API REST y diseño UI/UX en Figma.",
+              "También creé la landing page y el panel web con PHP, JavaScript, Bootstrap y HTML."
+            ]
+          },
+          "technologies": ["Flutter", "Figma", "PHP", "JavaScript", "Bootstrap", "REST API"]
+        }
+      ]
+    },
+    {
+      "id": "iot",
+      "icon": "assets/img/icons/iot.svg",
+      "projects": [
+        {
+          "name": "Smart Mirror Prototype",
+          "description": {
+            "en": [
+              "Developed a smart mirror prototype for Grupo Faisán, integrating IoT and voice assistant capabilities.",
+              "Created the backend service consumed by ESP32 microcontrollers using Node.js and Arduino C++.",
+              "Enabled real-time data display and integration with Alexa and Google Home for voice commands.",
+              "Led the development team, handling design, architecture, and prototype optimization."
+            ],
+            "es": [
+              "Desarrollé un prototipo de espejo inteligente para Grupo Faisán, integrando capacidades IoT y asistentes de voz.",
+              "Creé el servicio backend consumido por los microcontroladores ESP32 utilizando Node.js y Arduino en C++.",
+              "Permití la visualización de datos en tiempo real e integración con Alexa y Google Home para comandos de voz.",
+              "Lideré el equipo de desarrollo, encargándome del diseño, arquitectura y optimización del prototipo."
+            ]
+          },
+          "technologies": ["C++", "Arduino", "ESP32", "Node.js", "IoT"]
+        }
+      ]
+    },
+    {
+      "id": "freelance",
+      "icon": "assets/img/icons/code.svg",
+      "projects": [
+        {
+          "name": "UIUX Design Agency Website",
+          "description": {
+            "en": [
+              "Developed a responsive website for a local UI/UX design firm.",
+              "Used Bootstrap, CSS, HTML, and JavaScript for layout and interactivity.",
+              "This project marked the first professional experience in front-end web development."
+            ],
+            "es": [
+              "Desarrollé un sitio web responsivo para una empresa local de diseño UI/UX.",
+              "Utilicé Bootstrap, CSS, HTML y JavaScript para la estructura y la interactividad.",
+              "Este proyecto marcó mi primera experiencia profesional en desarrollo web frontend."
+            ]
+          },
+          "technologies": ["HTML", "CSS", "JavaScript", "Bootstrap"]
+        },
+        {
+          "name": "WordPress News Blogs",
+          "description": {
+            "en": [
+              "Developed and customized two WordPress news blogs for media outlets in Chihuahua and Monterrey.",
+              "Enhanced front-end appearance using CSS and JavaScript.",
+              "Optimized page performance and implemented basic SEO practices."
+            ],
+            "es": [
+              "Desarrollé y personalicé dos blogs de noticias en WordPress para medios de Chihuahua y Monterrey.",
+              "Mejoré la apariencia del frontend utilizando CSS y JavaScript.",
+              "Optimizé el rendimiento de las páginas e implementé prácticas básicas de SEO."
+            ]
+          },
+          "technologies": ["WordPress", "CSS", "JavaScript"]
+        },
+        {
+          "name": "Mechanic Workshop Billing App",
+          "description": {
+            "en": [
+              "Created a cross-platform payment and client management application for a mechanic workshop.",
+              "Integrated AI-assisted automation for invoice generation and customer tracking.",
+              "Used Python and SQLite for offline functionality in Android and Windows environments."
+            ],
+            "es": [
+              "Creé una aplicación multiplataforma para gestión de cobros y clientes en un taller mecánico.",
+              "Integré automatización asistida por IA para la generación de facturas y seguimiento de clientes.",
+              "Utilicé Python y SQLite para ofrecer funcionalidad offline en entornos Android y Windows."
+            ]
+          },
+          "technologies": ["Python", "SQLite", "Kivy", "AI"]
+        }
+      ]
+    },
+    {
+      "id": "ai",
+      "icon": "assets/img/icons/ai.svg",
+      "projects": [
+        {
+          "name": "Procom AI Integration",
+          "description": {
+            "en": [
+              "Researched and implemented AI applications to enhance software development efficiency.",
+              "Developed tools for intelligent code generation, error detection, and workflow automation.",
+              "Integrated AI models into production environments for internal use and client services."
+            ],
+            "es": [
+              "Investigé e implementé aplicaciones de IA para mejorar la eficiencia en el desarrollo de software.",
+              "Desarrollé herramientas para generación de código inteligente, detección de errores y automatización de flujos.",
+              "Integré modelos de IA en entornos de producción para uso interno y servicios a clientes."
+            ]
+          },
+          "technologies": ["Python", "AI", "Machine Learning", "APIs"]
+        }
+      ]
+    },
+    {
+      "id": "business",
+      "icon": "assets/img/icons/business.svg",
+      "projects": [
+        {
+          "name": "Aurio CRM",
+          "description": {
+            "en": [
+              "Designed and prototyped the Aurio CRM platform focused on digital marketing and Meta Ads for medical and SPA clients.",
+              "Led UI/UX design and technology selection, ensuring scalable architecture.",
+              "Collaborated across design, development, and administrative teams to ensure seamless implementation."
+            ],
+            "es": [
+              "Diseñé y prototipé la plataforma Aurio CRM enfocada en marketing digital y campañas de Meta Ads para médicos y SPA’s.",
+              "Lideré el diseño UI/UX y la selección tecnológica, asegurando una arquitectura escalable.",
+              "Colaboré entre equipos de diseño, desarrollo y administración para una implementación eficiente."
+            ]
+          },
+          "technologies": ["Figma", "PHP", "JavaScript", "Bootstrap", "SQL"]
+        },
+        {
+          "name": "Aurio Business Platform",
+          "description": {
+            "en": [
+              "Developed the B2B extension of Aurio, connecting suppliers with doctors through a centralized marketplace.",
+              "Managed multidisciplinary teams using Scrum and Jira.",
+              "Conducted user testing and investor presentations for platform validation.",
+              "Led UI/UX design, software architecture, and project management."
+            ],
+            "es": [
+              "Desarrollé la extensión B2B de Aurio, conectando proveedores con doctores mediante una plataforma centralizada.",
+              "Gestioné equipos multidisciplinarios utilizando Scrum y Jira.",
+              "Realicé pruebas de usuario y presentaciones para inversores para validar la plataforma.",
+              "Lideré el diseño UI/UX, la arquitectura del software y la gestión del proyecto."
+            ]
+          },
+          "technologies": ["React", "Node.js", "Figma", "Jira", "Scrum"]
+        },
+        {
+          "name": "Baldan Group Web Ecosystem",
+          "description": {
+            "en": [
+              "Developed and maintained multiple WordPress and Wix websites for Baldan Group and its international divisions.",
+              "Managed content for Mexico, UK, and Spain markets.",
+              "Integrated JavaScript and custom CSS enhancements for interactivity and branding consistency."
+            ],
+            "es": [
+              "Desarrollé y mantuve múltiples sitios web en WordPress y Wix para Baldan Group y sus divisiones internacionales.",
+              "Gestioné contenido para mercados internacionales.",
+              "Integré mejoras con JavaScript y CSS personalizado para mayor interactividad y coherencia visual."
+            ]
+          },
+          "technologies": ["WordPress", "Wix", "JavaScript", "CSS"]
+        }
+      ]
+    }
+  ]
+}
