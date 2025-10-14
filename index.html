@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduardo Carrera - Full Stack Developer</title>
+    <meta name="description" content="Professional Portfolio of Eduardo Carrera - Full Stack Developer & IT Specialist">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets\img\favico.ico">
+    
+    <!-- Preload de fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Cabecera con selector de idioma -->
+        <header class="header">
+            <div class="header-content">
+                <div class="title-section">
+                    <h1 class="title">$ <span class="cursor">eduardocarrera_portfolio</span></h1>
+                    <div class="subtitle">// Full Stack Developer & IT Specialist</div>
+                </div>
+
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="es">ES</button>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Vista unificada principal -->
+        <section id="main-content" class="section active">
+            <div class="content">
+                <!-- Sección Sobre Mí -->
+                <div class="about-section">
+                    <div class="profile">
+                        <div class="profile-image-container">
+                            <div class="profile-image">
+                                <img src="assets/img/profile.jpg" alt="Eduardo Carrera Profile Photo" id="profile-img" class="protected-image">
+                            </div>
+                        </div>
+                        <div class="profile-info">
+                            <h2 id="about-title" class="typing-title"></h2>
+                            <div id="about-description" class="fade-in-description"></div>
+                            <div class="contact-buttons">
+                                <a href="mailto:wrkedc@gmail.com" class="btn contact-btn" id="email-btn">
+                                    <div class="btn-icon">
+                                        <img src="assets/img/icons/icon-email.svg" alt="Email">
+                                    </div>
+                                    <span id="contact-text">Contact</span>
+                                </a>
+                                <a href="https://wa.me/526145101242" class="btn contact-btn" id="whatsapp-btn" target="_blank">
+                                    <div class="btn-icon">
+                                        <img src="assets/img/icons/icon-whatsapp.svg" alt="WhatsApp">
+                                    </div>
+                                    <span id="contact-text-whatsapp">Contact</span>
+                                </a>
+                                <a href="#" class="btn contact-btn" id="download-cv">
+                                    <div class="btn-icon">
+                                        <img src="assets/img/icons/icon-download.svg" alt="Download CV">
+                                    </div>
+                                    <span id="download-text">Download CV</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Separador visual -->
+                <div class="section-divider">
+                    <span id="projects-title">PROJECTS</span>
+                </div>
+                
+                <!-- Sección de Proyectos -->
+                <div class="projects-section">
+                    <!-- Navegación de categorías -->
+                    <div id="categories-nav" class="categories-nav">
+                        <!-- Las categorías se cargarán dinámicamente -->
+                    </div>
+                    
+                    <!-- Contenedor para proyectos -->
+                    <div id="projects-container" class="projects-container">
+                        <div id="projects-grid" class="projects-grid">
+                            <!-- Los proyectos se cargarán dinámicamente -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Efecto de luz dinámica -->
+        <div class="light-effect" id="light-effect"></div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
