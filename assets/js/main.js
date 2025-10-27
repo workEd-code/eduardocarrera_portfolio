@@ -1,14 +1,19 @@
 /**
  * MAIN.JS - Controlador principal del portafolio (Versión Final)
  * 
- * Funcionalidades:
+ * Nuevas funcionalidades:
+ * - Elementos flotantes solo en sección de proyectos
+ * - Iluminación de ícono de categoría activa
+ * - Menú de categorías para móviles
+ * - Sistema de fondos personalizados para proyectos
+ * 
+ * Funcionalidades existentes:
  * - Sistema multiidioma (EN/ES) con inglés por defecto
  * - Animación de typing para título y fade-in para descripción
  * - Descarga de CV según idioma
  * - Carga dinámica de categorías y proyectos desde JSON
- * - Navegación por categorías con animaciones
- * - Efectos de hover dinámicos
- * - Diseño completamente responsive
+ * - Scroll animado entre proyectos
+ * - Círculo de progreso para móviles
  */
 
 // Variables globales
@@ -16,6 +21,9 @@ let currentLanguage = 'en'; // Inglés por defecto
 let categoriesData = {};
 let translationsData = {};
 let currentCategoryIndex = 0;
+let currentProjectIndex = 0;
+let isScrolling = false;
+let activeCategoryId = null;
 
 // Inicialización cuando el DOM esté completamente cargado
 document.addEventListener('DOMContentLoaded', function() {
@@ -23,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
     loadTranslations();
     initDownloadCV();
     initLanguageSwitcher();
+    initScrollSystem();
 });
 
 /**
@@ -73,11 +82,14 @@ function loadTranslations() {
  * Carga los datos del portafolio
  */
 function loadPortfolioData() {
-    const categoriesContainer = document.getElementById('categories-nav');
-    const projectsContainer = document.getElementById('projects-grid');
+    const floatingContainer = document.getElementById('floating-categories');
+    const mobileContainer = document.getElementById('mobile-categories-nav');
+    const projectsContainer = document.getElementById('projects-scroll-container');
     
     // Mostrar estado de carga
-    categoriesContainer.innerHTML = '<div class="loading">' + 
+    floatingContainer.innerHTML = '<div class="loading">' + 
+        (translationsData[currentLanguage]?.loading || 'Loading...') + '</div>';
+    mobileContainer.innerHTML = '<div class="loading">' + 
         (translationsData[currentLanguage]?.loading || 'Loading...') + '</div>';
     projectsContainer.innerHTML = '<div class="loading">' + 
         (translationsData[currentLanguage]?.loadingProjects || 'Loading projects...') + '</div>';
@@ -91,15 +103,19 @@ function loadPortfolioData() {
         })
         .then(data => {
             categoriesData = data;
-            createCategoryButtons(data.categories);
+            createFloatingCategories(data.categories);
+            createMobileCategories(data.categories);
             if (data.categories.length > 0) {
-                displayProjectsByCategory(0);
+                displayAllProjects(data.categories);
+                initScrollObserver();
+                initMobileProgress();
             }
         })
         .catch(error => {
             console.error('Error:', error);
             const errorMsg = translationsData[currentLanguage]?.error || 'Error loading data';
-            categoriesContainer.innerHTML = '<p>' + errorMsg + '</p>';
+            floatingContainer.innerHTML = '<p>' + errorMsg + '</p>';
+            mobileContainer.innerHTML = '<p>' + errorMsg + '</p>';
             projectsContainer.innerHTML = '<p>' + errorMsg + '</p>';
         });
 }
@@ -124,7 +140,9 @@ function initLanguageSwitcher() {
             
             // Actualizar proyectos para la categoría actual
             if (categoriesData.categories && categoriesData.categories.length > 0) {
-                displayProjectsByCategory(currentCategoryIndex);
+                updateProjectsLanguage();
+                updateFloatingCategoriesLanguage();
+                updateMobileCategoriesLanguage();
             }
         });
     });
@@ -176,110 +194,243 @@ function updateUIForLanguage(lang) {
     document.getElementById('projects-title').textContent = langData.projects.title;
     
     // Actualizar categorías si ya están cargadas
-    updateCategoryButtonsLanguage(lang);
+    updateFloatingCategoriesLanguage(lang);
+    updateMobileCategoriesLanguage(lang);
 }
 
 /**
- * Actualiza los textos de los botones de categorías
+ * Actualiza los textos de los elementos flotantes
  */
-function updateCategoryButtonsLanguage(lang) {
+function updateFloatingCategoriesLanguage(lang = currentLanguage) {
     const langData = translationsData[lang];
     if (!langData || !categoriesData.categories) return;
     
-    document.querySelectorAll('.category-btn').forEach((btn, index) => {
-        const categoryId = btn.getAttribute('data-category');
+    document.querySelectorAll('.floating-category').forEach((element, index) => {
+        const categoryId = element.getAttribute('data-category');
         const categoryName = langData.categories[categoryId];
         if (categoryName) {
-            btn.querySelector('span:last-child').textContent = categoryName;
+            const bubble = element.querySelector('.category-bubble');
+            // Limitar a 2 palabras máximo por línea
+            const words = categoryName.split(' ');
+            if (words.length > 2) {
+                bubble.innerHTML = words.slice(0, 2).join(' ') + '<br>' + words.slice(2).join(' ');
+            } else {
+                bubble.textContent = categoryName;
+            }
         }
     });
 }
 
 /**
- * Crea los botones de categorías con íconos SVG
+ * Actualiza los textos de los elementos móviles
  */
-function createCategoryButtons(categories) {
-    const container = document.getElementById('categories-nav');
-    container.innerHTML = '';
-    
-    categories.forEach((category, index) => {
-        const button = document.createElement('button');
-        button.className = `category-btn ${index === 0 ? 'active' : ''}`;
-        button.setAttribute('data-category', category.id);
-        button.setAttribute('data-index', index);
+function updateMobileCategoriesLanguage(lang = currentLanguage) {
+    // Los elementos móviles solo muestran íconos, no necesitan actualización de texto
+}
+
+/**
+ * Actualiza el lenguaje de todos los proyectos
+ */
+function updateProjectsLanguage() {
+    const projectSlides = document.querySelectorAll('.project-slide');
+    projectSlides.forEach(slide => {
+        const projectName = slide.getAttribute('data-project-name');
+        const categoryId = slide.getAttribute('data-category');
         
-        // Crear contenedor de ícono SVG
-        const svgIcon = document.createElement('div');
-        svgIcon.className = 'category-icon';
-        svgIcon.innerHTML = `<img src="${category.icon}" alt="${category.id} icon">`;
-        
-        // Crear texto de la categoría
-        const textSpan = document.createElement('span');
-        const categoryName = translationsData[currentLanguage]?.categories[category.id] || category.id;
-        textSpan.textContent = categoryName;
-        
-        button.appendChild(svgIcon);
-        button.appendChild(textSpan);
-        
-        button.addEventListener('click', function() {
-            const newIndex = parseInt(this.getAttribute('data-index'));
-            currentCategoryIndex = newIndex;
-            
-            // Actualizar categoría activa
-            document.querySelectorAll('.category-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            this.classList.add('active');
-            
-            displayProjectsByCategory(newIndex);
-        });
-        
-        container.appendChild(button);
+        // Encontrar el proyecto en los datos
+        const category = categoriesData.categories.find(cat => cat.id === categoryId);
+        if (category) {
+            const project = category.projects.find(proj => proj.name === projectName);
+            if (project) {
+                updateProjectSlideContent(slide, project);
+            }
+        }
     });
 }
 
 /**
- * Muestra los proyectos de una categoría específica
+ * Actualiza el contenido de un slide de proyecto según el idioma
  */
-function displayProjectsByCategory(categoryIndex) {
-    const projectsContainer = document.getElementById('projects-grid');
-    const category = categoriesData.categories[categoryIndex];
+function updateProjectSlideContent(slideElement, project) {
+    const description = project.description[currentLanguage] || project.description.en || [];
     
-    if (!category || !category.projects) {
-        const noProjectsMsg = translationsData[currentLanguage]?.noProjects || 'No projects in this category.';
-        projectsContainer.innerHTML = `<p>${noProjectsMsg}</p>`;
-        return;
-    }
+    // Actualizar descripción
+    const descriptionList = slideElement.querySelector('.description-list');
+    descriptionList.innerHTML = '';
     
-    // Aplicar animación de salida
-    projectsContainer.classList.add('slide-left');
-    
-    setTimeout(() => {
-        projectsContainer.innerHTML = '';
-        
-        category.projects.forEach(project => {
-            const projectElement = createProjectElement(project);
-            projectsContainer.appendChild(projectElement);
-        });
-        
-        projectsContainer.classList.remove('slide-left');
-    }, 200);
+    description.forEach(desc => {
+        const li = document.createElement('li');
+        li.className = 'description-item';
+        li.textContent = desc;
+        descriptionList.appendChild(li);
+    });
 }
 
 /**
- * Crea el elemento HTML para un proyecto individual
+ * Crea los elementos flotantes de categorías
  */
-function createProjectElement(project) {
-    const projectCard = document.createElement('div');
-    projectCard.className = 'project-card';
+function createFloatingCategories(categories) {
+    const container = document.getElementById('floating-categories');
+    container.innerHTML = '';
+    
+    categories.forEach((category, index) => {
+        const categoryElement = document.createElement('div');
+        categoryElement.className = 'floating-category';
+        categoryElement.setAttribute('data-category', category.id);
+        categoryElement.setAttribute('data-index', index);
+        
+        // Crear contenedor del ícono
+        const iconDiv = document.createElement('div');
+        iconDiv.className = 'floating-icon';
+        iconDiv.innerHTML = `<img src="${category.icon}" alt="${category.id} icon">`;
+        
+        // Crear burbuja de texto
+        const bubbleDiv = document.createElement('div');
+        bubbleDiv.className = 'category-bubble';
+        const categoryName = translationsData[currentLanguage]?.categories[category.id] || category.id;
+        // Limitar a 2 palabras máximo por línea
+        const words = categoryName.split(' ');
+        if (words.length > 2) {
+            bubbleDiv.innerHTML = words.slice(0, 2).join(' ') + '<br>' + words.slice(2).join(' ');
+        } else {
+            bubbleDiv.textContent = categoryName;
+        }
+        
+        categoryElement.appendChild(iconDiv);
+        categoryElement.appendChild(bubbleDiv);
+        
+        categoryElement.addEventListener('click', function() {
+            const categoryIndex = parseInt(this.getAttribute('data-index'));
+            navigateToCategory(categoryIndex);
+        });
+        
+        container.appendChild(categoryElement);
+    });
+}
+
+/**
+ * Crea el menú de categorías para móviles
+ */
+function createMobileCategories(categories) {
+    const container = document.getElementById('mobile-categories-nav');
+    container.innerHTML = '';
+    
+    categories.forEach((category, index) => {
+        const categoryElement = document.createElement('button');
+        categoryElement.className = 'mobile-category-btn';
+        categoryElement.setAttribute('data-category', category.id);
+        categoryElement.setAttribute('data-index', index);
+        categoryElement.setAttribute('title', translationsData[currentLanguage]?.categories[category.id] || category.id);
+        
+        categoryElement.innerHTML = `<img src="${category.icon}" alt="${category.id} icon">`;
+        
+        categoryElement.addEventListener('click', function() {
+            const categoryIndex = parseInt(this.getAttribute('data-index'));
+            navigateToCategory(categoryIndex);
+        });
+        
+        container.appendChild(categoryElement);
+    });
+}
+
+/**
+ * Navega a una categoría específica
+ */
+function navigateToCategory(categoryIndex) {
+    const category = categoriesData.categories[categoryIndex];
+    if (!category) return;
+    
+    // Encontrar el primer proyecto de esta categoría
+    const firstProjectSlide = document.querySelector(`.project-slide[data-category="${category.id}"]`);
+    if (firstProjectSlide) {
+        smoothScrollToElement(firstProjectSlide);
+    }
+    
+    currentCategoryIndex = categoryIndex;
+    setActiveCategory(category.id);
+}
+
+/**
+ * Establece la categoría activa en todos los menús
+ */
+function setActiveCategory(categoryId) {
+    activeCategoryId = categoryId;
+    
+    // Remover clase activa de todos los elementos
+    document.querySelectorAll('.floating-category, .mobile-category-btn').forEach(el => {
+        el.classList.remove('active');
+    });
+    
+    // Agregar clase activa a los elementos de la categoría actual
+    const activeFloating = document.querySelector(`.floating-category[data-category="${categoryId}"]`);
+    const activeMobile = document.querySelector(`.mobile-category-btn[data-category="${categoryId}"]`);
+    
+    if (activeFloating) activeFloating.classList.add('active');
+    if (activeMobile) activeMobile.classList.add('active');
+}
+
+/**
+ * Desplazamiento suave a un elemento
+ */
+function smoothScrollToElement(element) {
+    const scrollContainer = document.getElementById('projects-scroll-container');
+    const elementTop = element.offsetTop;
+    
+    scrollContainer.scrollTo({
+        top: elementTop,
+        behavior: 'smooth'
+    });
+}
+
+/**
+ * Muestra todos los proyectos organizados por categorías
+ */
+function displayAllProjects(categories) {
+    const container = document.getElementById('projects-scroll-container');
+    container.innerHTML = '';
+    
+    let totalProjects = 0;
+    
+    categories.forEach(category => {
+        if (category.projects && category.projects.length > 0) {
+            category.projects.forEach(project => {
+                const projectElement = createProjectSlide(project, category.id);
+                container.appendChild(projectElement);
+                totalProjects++;
+            });
+        }
+    });
+    
+    // Si no hay proyectos, mostrar mensaje
+    if (totalProjects === 0) {
+        const noProjectsMsg = translationsData[currentLanguage]?.noProjects || 'No projects available.';
+        container.innerHTML = `<div class="loading">${noProjectsMsg}</div>`;
+    }
+}
+
+/**
+ * Crea un slide de proyecto para el scroll animado
+ */
+function createProjectSlide(project, categoryId) {
+    const projectSlide = document.createElement('div');
+    projectSlide.className = 'project-slide';
+    projectSlide.setAttribute('data-project-name', project.name);
+    projectSlide.setAttribute('data-category', categoryId);
+    
+    // Aplicar fondo personalizado si existe
+    if (project.background) {
+        projectSlide.style.setProperty('--project-background', project.background);
+        projectSlide.setAttribute('data-background', 'true');
+    }
     
     // Obtener descripción en el idioma actual
     const description = project.description[currentLanguage] || project.description.en || [];
     
     let projectHTML = `
-        <h3 class="project-title">${project.name}</h3>
-        <div class="project-description">
-            <ul class="description-list">
+        <div class="project-slide-content">
+            <h3 class="project-title">${project.name}</h3>
+            <div class="project-description">
+                <ul class="description-list">
     `;
     
     // Añadir cada punto de la descripción
@@ -315,8 +466,119 @@ function createProjectElement(project) {
         projectHTML += `</div>`;
     }
     
-    projectCard.innerHTML = projectHTML;
-    return projectCard;
+    projectHTML += `</div></div>`;
+    projectSlide.innerHTML = projectHTML;
+    
+    return projectSlide;
+}
+
+/**
+ * Inicializa el sistema de scroll animado
+ */
+function initScrollSystem() {
+    const scrollContainer = document.getElementById('projects-scroll-container');
+    
+    // Prevenir scroll rápido múltiple
+    scrollContainer.addEventListener('scroll', function() {
+        if (!isScrolling) {
+            isScrolling = true;
+            setTimeout(() => {
+                isScrolling = false;
+            }, 500);
+        }
+    });
+    
+    // Actualizar progreso de scroll para desktop
+    scrollContainer.addEventListener('scroll', updateScrollProgress);
+}
+
+/**
+ * Inicializa el Intersection Observer para detectar proyectos visibles
+ */
+function initScrollObserver() {
+    const options = {
+        root: document.getElementById('projects-scroll-container'),
+        rootMargin: '0px',
+        threshold: 0.6 // 60% visible
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const projectSlide = entry.target;
+                projectSlide.classList.add('active');
+                
+                // Actualizar categoría activa basado en el proyecto visible
+                const categoryId = projectSlide.getAttribute('data-category');
+                setActiveCategory(categoryId);
+            } else {
+                entry.target.classList.remove('active');
+            }
+        });
+    }, options);
+    
+    // Observar todos los slides de proyectos
+    document.querySelectorAll('.project-slide').forEach(slide => {
+        observer.observe(slide);
+    });
+}
+
+/**
+ * Actualiza la barra de progreso del scroll para desktop
+ */
+function updateScrollProgress() {
+    const scrollContainer = document.getElementById('projects-scroll-container');
+    const progressBar = document.querySelector('.progress-bar');
+    
+    const scrollTop = scrollContainer.scrollTop;
+    const scrollHeight = scrollContainer.scrollHeight - scrollContainer.clientHeight;
+    const scrollPercentage = (scrollTop / scrollHeight) * 100;
+    
+    progressBar.style.height = `${scrollPercentage}%`;
+}
+
+/**
+ * Inicializa el círculo de progreso para móviles
+ */
+function initMobileProgress() {
+    const mobileProgress = document.getElementById('mobile-progress');
+    const progressCircle = mobileProgress.querySelector('.progress-ring-circle');
+    const progressText = mobileProgress.querySelector('.progress-text');
+    const scrollContainer = document.getElementById('projects-scroll-container');
+    
+    const circumference = 2 * Math.PI * 27; // radio del círculo
+    progressCircle.style.strokeDasharray = circumference;
+    
+    function updateMobileProgress() {
+        const scrollTop = scrollContainer.scrollTop;
+        const scrollHeight = scrollContainer.scrollHeight - scrollContainer.clientHeight;
+        const scrollPercentage = (scrollTop / scrollHeight) * 100;
+        
+        const offset = circumference - (scrollPercentage / 100) * circumference;
+        progressCircle.style.strokeDashoffset = offset;
+        progressText.textContent = Math.round(scrollPercentage) + '%';
+        
+        // Si llegamos al final, cambiar a botón de volver al inicio
+        if (scrollPercentage >= 99) {
+            mobileProgress.classList.add('back-to-top');
+            progressText.textContent = '↑';
+        } else {
+            mobileProgress.classList.remove('back-to-top');
+        }
+    }
+    
+    scrollContainer.addEventListener('scroll', updateMobileProgress);
+    
+    // Click en el círculo para volver al inicio
+    mobileProgress.addEventListener('click', function() {
+        if (this.classList.contains('back-to-top')) {
+            // Volver al inicio de los proyectos
+            scrollContainer.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    });
 }
 
 /**

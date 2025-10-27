@@ -76,22 +76,45 @@
                     <span id="projects-title">PROJECTS</span>
                 </div>
                 
-                <!-- Sección de Proyectos -->
-                <div class="projects-section">
-                    <!-- Navegación de categorías -->
-                    <div id="categories-nav" class="categories-nav">
+                <!-- Sección de Proyectos con Scroll Animado -->
+                <div class="projects-scroll-section">
+                    <!-- Elementos flotantes de categorías (DENTRO de la sección de proyectos) -->
+                    <div id="floating-categories" class="floating-categories">
+                        <!-- Las categorías se cargarán dinámicamente -->
+                    </div>
+
+                    <!-- Menú de categorías para móviles -->
+                    <div id="mobile-categories-nav" class="mobile-categories-nav">
                         <!-- Las categorías se cargarán dinámicamente -->
                     </div>
                     
-                    <!-- Contenedor para proyectos -->
-                    <div id="projects-container" class="projects-container">
-                        <div id="projects-grid" class="projects-grid">
-                            <!-- Los proyectos se cargarán dinámicamente -->
+                    <div id="projects-scroll-container" class="projects-scroll-container">
+                        <!-- Los proyectos se cargarán dinámicamente como slides -->
+                    </div>
+                    
+                    <!-- Indicadores de progreso para desktop -->
+                    <div class="scroll-indicators">
+                        <div class="scroll-progress">
+                            <div class="progress-bar"></div>
+                        </div>
+                        <div class="scroll-hint">
+                            <span>Scroll to navigate</span>
+                            <div class="scroll-arrow">↓</div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        
+        <!-- Círculo de progreso para móviles -->
+        <div id="mobile-progress" class="mobile-progress">
+            <div class="progress-circle">
+                <svg class="progress-ring" width="60" height="60">
+                    <circle class="progress-ring-circle" stroke="var(--accent-color)" stroke-width="4" fill="transparent" r="27" cx="30" cy="30"/>
+                </svg>
+                <div class="progress-text">0%</div>
+            </div>
+        </div>
         
         <!-- Efecto de luz dinámica -->
         <div class="light-effect" id="light-effect"></div>
