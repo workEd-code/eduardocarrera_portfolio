@@ -192,7 +192,7 @@
         },
         {
           "name": "AURIO Business",
-          "background": "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('workEd-code/eduardocarrera_portfolio/assets/img/backgrounds/AURIO_Business.webp') center/cover",
+          "background": "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://worked-code.github.io/eduardocarrera_portfolio/assets/img/backgrounds/AURIO_Business.webp') center/cover",
           "description": {
             "es": [
               "Plataforma B2B derivada del proyecto AURIO para gestión de proveedores y clientes.",
