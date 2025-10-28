@@ -264,6 +264,38 @@ function updateProjectSlideContent(slideElement, project) {
         li.textContent = desc;
         descriptionList.appendChild(li);
     });
+
+    // Update link texts/icons to match current language (if links exist)
+    const linksContainer = slideElement.querySelector('.project-links');
+    if (linksContainer) {
+        const anchors = linksContainer.querySelectorAll('.project-link');
+        anchors.forEach(a => {
+            const type = a.getAttribute('data-link-type');
+            let linkText = '';
+            let icon = '';
+
+            if (type === 'demo') {
+                linkText = translationsData[currentLanguage]?.projects?.viewDemo || (currentLanguage === 'en' ? 'View Demo' : 'Ver Demo');
+                icon = '🔍';
+            } else if (type === 'website') {
+                linkText = translationsData[currentLanguage]?.projects?.viewWebsite || (currentLanguage === 'en' ? 'View Website' : 'Ver Sitio');
+                icon = '🌐';
+            } else if (type === 'code' || type === 'repo' || type === 'github') {
+                // Accept several possible keys that might represent source code
+                linkText = translationsData[currentLanguage]?.projects?.viewCode || (currentLanguage === 'en' ? 'View Code' : 'Ver Código');
+                icon = '💻';
+            } else {
+                // Generic fallback
+                linkText = translationsData[currentLanguage]?.projects?.viewLink || (currentLanguage === 'en' ? 'Open' : 'Abrir');
+                icon = '🔗';
+            }
+
+            const iconSpan = a.querySelector('.link-icon');
+            const textSpan = a.querySelector('.link-text');
+            if (iconSpan) iconSpan.textContent = icon;
+            if (textSpan) textSpan.textContent = linkText;
+        });
+    }
 }
 
 /**
@@ -451,16 +483,31 @@ function createProjectSlide(project, categoryId) {
     
     // Añadir enlaces
     if (project.links) {
-        const viewDemoText = currentLanguage === 'en' ? 'View Demo' : 'Ver Demo';
-        const viewCodeText = currentLanguage === 'en' ? 'View Code' : 'Ver Código';
-        
+        // Localized link texts (fallback to simple english/spanish if translations missing)
+        const viewDemoText = translationsData[currentLanguage]?.projects?.viewDemo || (currentLanguage === 'en' ? 'View Demo' : 'Ver Demo');
+        const viewCodeText = translationsData[currentLanguage]?.projects?.viewCode || (currentLanguage === 'en' ? 'View Code' : 'Ver Código');
+        const viewWebsiteText = translationsData[currentLanguage]?.projects?.viewWebsite || (currentLanguage === 'en' ? 'View Website' : 'Ver Sitio');
+
         projectHTML += `<div class="project-links">`;
         for (const [type, url] of Object.entries(project.links)) {
-            const linkText = type === 'demo' ? viewDemoText : viewCodeText;
-            const icon = type === 'demo' ? '🔍' : '💻';
-            projectHTML += `<a href="${url}" class="project-link" target="_blank" rel="noopener">
-                <span>${icon}</span>
-                <span>${linkText}</span>
+            let linkText = viewCodeText;
+            let icon = '💻';
+
+            if (type === 'demo') {
+                linkText = viewDemoText;
+                icon = '🔍';
+            } else if (type === 'website') {
+                linkText = viewWebsiteText;
+                icon = '🌐';
+            } else if (type === 'code') {
+                linkText = viewCodeText;
+                icon = '💻';
+            }
+
+            // Add data-link-type so we can update the text on language change
+            projectHTML += `<a href="${url}" class="project-link" data-link-type="${type}" target="_blank" rel="noopener">
+                <span class="link-icon">${icon}</span>
+                <span class="link-text">${linkText}</span>
             </a>`;
         }
         projectHTML += `</div>`;

@@ -462,7 +462,7 @@ body:hover .light-effect {
 .section-divider::after {
     content: '';
     flex: 1;
-    height: 1px;
+    height: 0px;
     background-color: var(--grid-color);
 }
 
