@@ -28,7 +28,7 @@
         },
         {
           "name": "Dracula Studio",
-          "background": "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://worked-code.github.io/eduardocarrera_portfolio/assets/img/backgrounds/Dracula.webp') center/cover",
+          "background": "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('./assets/img/backgrounds/Dracula.webp') center/cover",
           "description": {
             "es": [
               "Desarrollé el sitio web de Dracula Studio en Wix, siguiendo el diseño del equipo gráfico.",
