@@ -28,7 +28,7 @@
         },
         {
           "name": "Dracula Studio",
-          "background": "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(./assets/img/backgrounds/Dracula.webp) center/cover",
+          "background": "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/img/backgrounds/dracula.webp') center/cover",
           "description": {
             "es": [
               "Desarrollé el sitio web de Dracula Studio en Wix, siguiendo el diseño del equipo gráfico.",
@@ -48,7 +48,7 @@
         },
         {
           "name": "Residencia Guadalupe",
-          "background": "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(./assets/img/backgrounds/Residencia.webp) center/cover",
+          "background": "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/img/backgrounds/residencia.webp') center/cover",
           "description": {
             "es": [
               "Desarrollé el sitio web de Residencia Guadalupe A.C. en Wix con funciones JS personalizadas.",
@@ -68,7 +68,7 @@
         },
         {
           "name": "Baldan Group",
-          "background": "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(./assets/img/backgrounds/Baldan.webp) center/cover",
+          "background": "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/img/backgrounds/baldan.webp') center/cover",
           "description": {
             "es": [
               "Actualicé y gestioné múltiples sitios de Baldan Group bajo WordPress.",
@@ -88,7 +88,7 @@
         },
         {
           "name": "Neo Earth",
-          "background": "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(./assets/img/backgrounds/NeoEarth.webp) center/cover",
+          "background": "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/img/backgrounds/neoearth.webp') center/cover",
           "description": {
             "es": [
               "Desarrollé desde cero el sitio de Neo Earth en SquareSpace con funciones personalizadas en JavaScript.",
@@ -168,7 +168,7 @@
       "projects": [
         {
           "name": "AURIO Platform",
-          "background": "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(./assets/img/backgrounds/AURIO.webp) center/cover",
+          "background": "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/img/backgrounds/aurio.webp') center/cover",
           "description": {
             "es": [
               "Actué como IT Analyst y posteriormente como Project Manager en el desarrollo de AURIO.",
@@ -190,7 +190,7 @@
         },
         {
           "name": "AURIO Business",
-          "background": "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(./assets/img/backgrounds/AURIO_Business.webp) center/cover",
+          "background": "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/img/backgrounds/aurio_business.webp') center/cover",
           "description": {
             "es": [
               "Plataforma B2B derivada del proyecto AURIO para gestión de proveedores y clientes.",
