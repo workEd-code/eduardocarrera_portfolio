@@ -6,7 +6,7 @@
       "projects": [
         {
           "name": "ProCom 2000",
-          "background": "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(./assets/img/backgrounds/ProCom.webp) center/cover",
+          "background": "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(assets/img/backgrounds/ProCom.webp) center/cover",
           "description": {
             "es": [
               "Primer desarrollo web realizado para la empresa ProCom 2000.",
