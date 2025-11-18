@@ -1,0 +1,48 @@
+{
+  "en": {
+    "about": {
+      "title": "> Hello, I'm Eduardo Carrera",
+      "description": "Full Stack Developer and IT Specialist with experience in software development, project coordination, and process optimization. Focused on building efficient and scalable web solutions using modern technologies and AI-assisted development.",
+      "contact": "Contact",
+      "download": "Download CV",
+      "linkedin": "LinkedIn"
+    },
+    "projects": {
+      "title": "PROJECTS"
+    },
+    "cvUrl": "./assets/docs/eduardo_cv_eng.pdf",
+    "categories": {
+      "software": "Software Development",
+      "devops": "Automation & Process Optimization",
+      "mobile": "Experimental & Learning Projects"
+    },
+    "loading": "Loading...",
+    "loadingProjects": "Loading projects...",
+    "error": "Error loading data. Please try again later.",
+    "noProjects": "No projects in this category.",
+    "downloadMessage": "Downloading"
+  },
+  "es": {
+    "about": {
+      "title": "> Hola, soy Eduardo Carrera",
+      "description": "Desarrollador Full Stack y Especialista en Tecnologías de la Información, con experiencia en desarrollo de software, coordinación de proyectos y optimización de procesos. Enfocado en crear soluciones web eficientes y escalables mediante el uso de tecnologías modernas y desarrollo asistido por inteligencia artificial.",
+      "contact": "Contacto",
+      "download": "Descargar CV",
+      "linkedin": "LinkedIn"
+    },
+    "projects": {
+      "title": "PROYECTOS"
+    },
+    "cvUrl": "./assets/docs/eduardo_cv_esp.pdf",
+    "categories": {
+      "software": "Desarrollo de Software",
+      "devops": "Automatización y Optimización de Procesos",
+      "mobile": "Proyectos Experimentales y de Aprendizaje"
+    },
+    "loading": "Cargando...",
+    "loadingProjects": "Cargando proyectos...",
+    "error": "Error al cargar los datos. Intenta más tarde.",
+    "noProjects": "No hay proyectos en esta categoría.",
+    "downloadMessage": "Descargando"
+  }
+}

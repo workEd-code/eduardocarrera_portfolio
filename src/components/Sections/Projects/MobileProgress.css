@@ -1,0 +1,49 @@
+/* ===== CÍRCULO DE PROGRESO PARA MÓVILES ===== */
+.mobile-progress {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+  display: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.progress-circle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+
+.progress-ring {
+  transform: rotate(-90deg);
+}
+
+.progress-ring-circle {
+  transition: stroke-dashoffset 0.3s;
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.7rem;
+  color: var(--text-primary);
+  transition: var(--transition);
+}
+
+.mobile-progress.back-to-top .progress-text {
+  font-size: 1.5rem;
+}
+
+.mobile-progress:hover {
+  transform: scale(1.1);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .mobile-progress {
+    display: block;
+  }
+}

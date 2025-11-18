@@ -1,0 +1,184 @@
+{
+  "basics": {
+    "name": "Eduardo Carrera",
+    "headline": "Full Stack Developer | Project Manager | APIs and Agile Methodologies Specialist",
+    "email": "wrkedc@gmail.com",
+    "phone": "+52 614 100 7581",
+    "location": "Chihuahua, Chih.",
+    "url": {
+      "label": "www.worked-code.github.io/eduardocarrera_portfolio/",
+      "href": "https://www.worked-code.github.io/eduardocarrera_portfolio/"
+    },
+    "picture": {
+      "url": "https://storage.rxresu.me/cmhy24o8r16wwx57wo1ff1h42/pictures/coafa0ugsstcp7i56pqqnbwx.jpg",
+      "hidden": true
+    }
+  },
+  "sections": {
+    "summary": {
+      "name": "SUMMARY",
+      "visible": true,
+      "content": "<p>Professional in <strong>Information Technology</strong> specialized in <strong>cross-platform software development</strong>, with experience in <strong>agile project management, backend/frontend, API integration, AI and system maintenance.</strong></p><p>Leadership in <strong>automation, CRM and dashboard initiatives applying Scrum</strong>, optimizing processes and fostering collaborative environments.</p><p>I stand out for my focus on technological optimization, continuous learning and measurable results, seeking to contribute in teams that integrate <strong>Python, JavaScript, Node.js, AI and SQL databases</strong>.</p>"
+    },
+    "education": {
+      "name": "EDUCATION",
+      "visible": true,
+      "items": [
+        {
+          "institution": "Universidad Tecnológica de Chihuahua",
+          "studyType": "TSU",
+          "area": "Information Technology | Cross-Platform Software Development",
+          "date": "2019 - 2023"
+        },
+        {
+          "institution": "TripleTen",
+          "studyType": "BootCamp",
+          "area": "Data Analysis with Python",
+          "date": "2025 - Present"
+        }
+      ]
+    },
+    "experience": {
+      "name": "EXPERIENCE",
+      "visible": true,
+      "items": [
+        {
+          "company": "ProCom",
+          "position": "Full Stack Developer | AI and Custom Dashboards",
+          "location": "Chihuahua",
+          "date": "2025 – Present",
+          "summary": "<ul><li>Develop control panels and <strong>custom CRMs</strong> using <strong>JavaScript, SQL and Python</strong> to improve operational reporting</li><li>Implement <strong>AI</strong> models to <strong>optimize delivery times and software quality</strong></li><li>Document weekly deliveries and maintain development traceability under <strong>Scrum</strong></li><li>Integrate <strong>RESTful API</strong> with <strong>PostgreSQL and Node.js</strong> to extend <strong>CRM</strong> functionality</li><li>Design automated unit tests with <strong>Postman</strong> to validate integrations</li><li>Design the <strong>framework and prompt architecture</strong> for a <strong>conversational AI agent</strong>, integrating the <strong>WhatsApp API</strong> for intelligent responses and automated service flows</li></ul>",
+          "url": "https://www.procom2000.com.mx/"
+        },
+        {
+          "company": "Baldan Group",
+          "position": "Technical Project Manager | National Maintenance and Support",
+          "location": "Mexico City",
+          "date": "2022 - 2024",
+          "summary": "<ul><li>Manage <strong>communication with clients</strong>, ensuring timely technical support</li><li>Coordinate <strong>multidisciplinary teams</strong> and provide support to accounting and sales</li><li>Standardize <strong>technical documentation in Jira and Excel</strong>, detecting bottlenecks and proposing scalable solutions</li><li>Prepare <strong>reports in English</strong> and participate in bilateral meetings to propose <strong>improvements in processes and technical communication</strong></li></ul>",
+          "url": "https://www.baldangroup.com"
+        },
+        {
+          "company": "Aurio & Drácula Studio",
+          "position": "Scrum Project Manager | CRM and Marketing Development",
+          "location": "Mexico City",
+          "date": "2021 - 2024",
+          "summary": "<ul><li>Coordinate development projects under <strong>Scrum</strong>, improving team communication and productivity</li><li>Develop and maintain <strong>websites with HTML, Wix, Squarespace and WordPress</strong>, ensuring adaptable design</li><li>Create <strong>AURIO UI/UX prototypes</strong> in <strong>Figma</strong></li><li>Design and implement a <strong>CRM integrated with sales and marketing</strong></li><li>Integrate <strong>REST services</strong> and monitor performance metrics with management tools</li></ul>",
+          "url": "https://www.dracula.mx/"
+        },
+        {
+          "company": "Grupo Faisán",
+          "position": "Developer | Electronic Prototypes",
+          "location": "Chihuahua",
+          "date": "2020 - 2021",
+          "summary": "<ul><li>Program <strong>Arduino and ESP32 microcontrollers</strong> using <strong>C/C++</strong> for IoT projects</li><li>Develop <strong>innovative electronic prototypes</strong>, including a functional smart mirror</li></ul>"
+        }
+      ]
+    },
+    "languages": {
+      "name": "LANGUAGES",
+      "visible": true,
+      "items": [
+        {
+          "name": "Spanish",
+          "description": "Native"
+        },
+        {
+          "name": "English",
+          "description": "Intermediate | B2"
+        }
+      ]
+    },
+    "skills": {
+      "name": "SKILLS",
+      "visible": true,
+      "items": [
+        {
+          "name": "Soft Skills",
+          "keywords": [
+            "Leadership",
+            "Analytical Thinking",
+            "Teamwork",
+            "Resilience",
+            "Effective Communication",
+            "Adaptability",
+            "Continuous Learning",
+            "Results Orientation",
+            "Time Management"
+          ]
+        },
+        {
+          "name": "Technical Skills",
+          "keywords": [
+            "Cross-Platform Software Development",
+            "Backend and Frontend Development",
+            "Relational Database Design",
+            "Requirements Analysis",
+            "Project Management under Scrum",
+            "Flowcharts",
+            "Unit Testing",
+            "Technical Documentation",
+            "Technological Process Optimization"
+          ]
+        }
+      ]
+    },
+    "tools": {
+      "name": "TOOLS & TECHNOLOGIES",
+      "visible": true,
+      "keywords": [
+        "JavaScript",
+        "TypeScript",
+        "Python",
+        "Node.js",
+        "Nest.js",
+        "React",
+        "SQL",
+        "PostgreSQL",
+        "MySQL",
+        "Docker",
+        "AWS Services",
+        "API Gateway",
+        "CI/CD Pipelines",
+        "Pytest",
+        "Unit Testing Frameworks",
+        "Jira",
+        "Postman",
+        "Github",
+        "Notion",
+        "Microsoft Office 365",
+        "G-Suite"
+      ]
+    },
+    "achievements": {
+      "name": "ACHIEVEMENTS",
+      "visible": true,
+      "items": [
+        {
+          "name": "Optimization of National Support and Investment Recovery at BALDAN",
+          "summary": "Direction of a <strong>team of 4 technicians in +4 cities</strong>, implementing maintenance and support solutions that boosted key sales and <strong>recovered</strong> more than <strong>$16M</strong> in pending portfolio"
+        },
+        {
+          "name": "Process Optimization with AI and Automation at PROCOM",
+          "summary": "Implementation of automated <strong>research and development flows with AI, reducing costs by +20%</strong> and improving team productivity"
+        },
+        {
+          "name": "Inventory Management Automation at PROCOM",
+          "summary": "Development of <strong>2 internal applications</strong> with code scanning, eliminating errors in the storage flow and <strong>avoiding operational losses</strong>"
+        },
+        {
+          "name": "Coordination of Multidisciplinary Teams at AURIO & DRÁCULA STUDIO",
+          "summary": "Management of <strong>communication</strong> between business, design and development areas, applying <strong>Scrum</strong> in <strong>Jira</strong> to ensure agile and collaborative execution"
+        },
+        {
+          "name": "Agile Project Management at GRUPO FAISÁN",
+          "summary": "Leadership of a team of 3 people applying <strong>Scrum</strong> to develop <strong>APIs linked with Alexa and Google Home</strong>, integrating the <strong>cloud storage service</strong> to save photos and files"
+        }
+      ]
+    }
+  },
+  "layout": [
+    [ "summary", "achievements", "experience"],
+    ["languages", "education", "skills", "tools"]
+  ]
+}

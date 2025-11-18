@@ -1,0 +1,72 @@
+/* ===== MENÚ DE CATEGORÍAS PARA MÓVILES ===== */
+.mobile-categories-nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: transparent;
+  z-index: 1000;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.mobile-category-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--grid-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.mobile-category-btn img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+  transition: var(--transition);
+}
+
+.mobile-category-btn.active,
+.mobile-category-btn:hover {
+  background-color: var(--accent-color);
+  box-shadow: 0 0 15px rgba(77, 171, 247, 0.4);
+  transform: scale(1.1);
+}
+
+.mobile-category-btn.active img,
+.mobile-category-btn:hover img {
+  filter: brightness(0) invert(0);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .mobile-categories-nav {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobile-categories-nav {
+    gap: 0.5rem;
+    padding: 0.75rem;
+  }
+  
+  .mobile-category-btn {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .mobile-category-btn img {
+    width: 18px;
+    height: 18px;
+  }
+}

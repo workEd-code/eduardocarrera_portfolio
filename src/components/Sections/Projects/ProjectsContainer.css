@@ -1,0 +1,33 @@
+/* ===== CONTENEDOR DE SCROLL PARA PROYECTOS ===== */
+.projects-scroll-section {
+  position: relative;
+  height: calc(100vh - 140px);
+  overflow: hidden;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.projects-scroll-container {
+  height: 100%;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  position: relative;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.projects-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .projects-scroll-section {
+    height: calc(100vh - 120px);
+  }
+  
+  .projects-scroll-container {
+    scroll-snap-type: y proximity;
+  }
+}

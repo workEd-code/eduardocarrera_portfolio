@@ -1,0 +1,35 @@
+/* ===== SELECTOR DE IDIOMA ===== */
+.language-switcher {
+  display: flex;
+  gap: 0.5rem;
+  background: var(--bg-secondary);
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--grid-color);
+  align-self: flex-start;
+}
+
+.lang-btn {
+  padding: 0.5rem 1rem;
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: var(--font-primary);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.lang-btn.active,
+.lang-btn:hover {
+  background: var(--accent-color);
+  color: var(--bg-primary);
+}
+
+@media (max-width: 768px) {
+  .language-switcher {
+    align-self: center;
+  }
+}

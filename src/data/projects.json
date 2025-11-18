@@ -1,0 +1,216 @@
+{
+  "categories": [
+    {
+      "id": "software",
+      "icon": "/eduardocarrera_portfolio/assets/img/icons/code.svg",
+      "projects": [
+        {
+          "name": "ProCom 2000",
+          "background": "linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)",
+          "description": {
+            "es": [
+              "Primer desarrollo web realizado para la empresa ProCom 2000.",
+              "Diseñé y programé el sitio utilizando HTML, CSS, JS y PHP con Bootstrap.",
+              "Proyecto orientado al aprendizaje de desarrollo web y despliegue de hosting.",
+              "Permitió establecer presencia digital y mejorar el contacto con clientes."
+            ],
+            "en": [
+              "First web development project created for ProCom 2000.",
+              "Designed and coded the site using HTML, CSS, JS, and PHP with Bootstrap.",
+              "Focused on learning web development and deployment best practices.",
+              "Helped establish the company’s digital presence and customer outreach."
+            ]
+          },
+          "technologies": ["HTML", "CSS", "JavaScript", "PHP", "Bootstrap"],
+          "links": {
+            "website": "https://procom2000.com.mx"
+          }
+        },
+        {
+          "name": "Dracula Studio",
+          "background": "linear-gradient(135deg, #2d132c 0%, #811a7e 100%)",
+          "description": {
+            "es": [
+              "Desarrollé el sitio web de Dracula Studio en Wix, siguiendo el diseño del equipo gráfico.",
+              "Implementé funciones de JavaScript para animaciones y comportamiento dinámico.",
+              "Sitio orientado a mostrar servicios creativos y portafolio de la agencia."
+            ],
+            "en": [
+              "Developed the Dracula Studio website in Wix, following the graphic design team’s layout.",
+              "Implemented JavaScript functions for animations and dynamic behavior.",
+              "Website focused on showcasing creative services and portfolio work."
+            ]
+          },
+          "technologies": ["Wix", "JavaScript", "UI Design"],
+          "links": {
+            "website": "https://www.dracula.mx/"
+          }
+        },
+        {
+          "name": "Residencia Guadalupe",
+          "background": "linear-gradient(135deg, #1e3a5f 0%, #0f4c75 100%)",
+          "description": {
+            "es": [
+              "Desarrollé el sitio web de Residencia Guadalupe A.C. en Wix con funciones JS personalizadas.",
+              "Implementé estrategias SEO y redacción de descripciones optimizadas.",
+              "El diseño y la estructura siguen activos tras la renovación del sitio."
+            ],
+            "en": [
+              "Developed the Residencia Guadalupe A.C. website in Wix with custom JS functions.",
+              "Implemented SEO strategies and optimized meta descriptions.",
+              "Design and structure remain active after the latest update."
+            ]
+          },
+          "technologies": ["Wix", "JavaScript", "SEO"],
+          "links": {
+            "website": "https://www.residenciaguadalupe.com/"
+          }
+        },
+        {
+          "name": "Baldan Group",
+          "background": "linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%)",
+          "description": {
+            "es": [
+              "Actualicé y gestioné múltiples sitios de Baldan Group bajo WordPress.",
+              "Agregué nuevos productos, brochures y materiales de marketing en colaboración con el equipo de diseño.",
+              "Mantuve la coherencia visual y SEO entre las versiones México y Reino Unido."
+            ],
+            "en": [
+              "Updated and managed multiple Baldan Group websites built with WordPress.",
+              "Added new products, brochures, and marketing materials in coordination with the design team.",
+              "Maintained visual and SEO consistency between Mexico and UK versions."
+            ]
+          },
+          "technologies": ["WordPress", "HTML", "SEO", "CMS"],
+          "links": {
+            "website": "https://baldangroup.com/"
+          }
+        },
+        {
+          "name": "Neo Earth",
+          "background": "linear-gradient(135deg, #134611 0%, #2d6a4f 100%)",
+          "description": {
+            "es": [
+              "Desarrollé desde cero el sitio de Neo Earth en SquareSpace con funciones personalizadas en JavaScript.",
+              "Implementé secciones interactivas según el diseño visual del cliente.",
+              "Optimicé la estructura SEO y la experiencia de navegación en múltiples idiomas."
+            ],
+            "en": [
+              "Developed Neo Earth’s website from scratch on SquareSpace with custom JavaScript features.",
+              "Implemented interactive sections following the client’s visual design.",
+              "Optimized SEO structure and navigation experience across multiple languages."
+            ]
+          },
+          "technologies": ["SquareSpace", "JavaScript", "SEO"],
+          "links": {
+            "website": "https://www.neoearth.fr"
+          }
+        }
+      ]
+    },
+    {
+      "id": "iot",
+      "icon": "/eduardocarrera_portfolio/assets/img/icons/iot.svg",
+      "projects": [
+        {
+          "name": "Smart Mirror IoT – Grupo Faisán",
+          "background": "linear-gradient(135deg, #2e1a47 0%, #4a148c 100%)",
+          "description": {
+            "es": [
+              "Lideré un equipo de tres personas para desarrollar un espejo inteligente controlado por voz.",
+              "Utilizamos microcontroladores ESP32 y Arduino, con conexión API mediante Node.js.",
+              "Integrado con Google Home y Alexa para reconocimiento y control por voz.",
+              "Desarrollo orientado al Internet de las Cosas con interfaz conectada a la nube."
+            ],
+            "en": [
+              "Led a team of three to develop a voice-controlled smart mirror.",
+              "Used ESP32 and Arduino microcontrollers with Node.js API integration.",
+              "Connected to Google Home and Alexa for voice recognition and automation.",
+              "IoT-focused development with cloud-connected interface."
+            ]
+          },
+          "technologies": ["ESP32", "Arduino", "Node.js", "Google Home API", "Alexa"],
+          "links": {
+            "code": "https://github.com/artoria026/SmartMirror2.0"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai",
+      "icon": "/eduardocarrera_portfolio/assets/img/icons/ai.svg", 
+      "projects": [
+        {
+          "name": "Augmented Reality Educational Project",
+          "background": "linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%)",
+          "description": {
+            "es": [
+              "Proyecto universitario de realidad aumentada guiado por el profesor Dafnis Villagrán.",
+              "Participé como documentador principal, coordinando la integración de software y hardware.",
+              "El proyecto exploraba experiencias educativas interactivas con realidad aumentada."
+            ],
+            "en": [
+              "University augmented reality project guided by professor Dafnis Villagrán.",
+              "Served as main documenter, coordinating software and hardware integration.",
+              "The project explored interactive educational experiences using AR."
+            ]
+          },
+          "technologies": ["Unity", "AR Toolkit", "Documentation"],
+          "links": {
+            "code": "https://github.com/humeurRd/Est-Augmented-Reality"
+          }
+        }
+      ]
+    },
+    {
+      "id": "business",
+      "icon": "/eduardocarrera_portfolio/assets/img/icons/business.svg",
+      "projects": [
+        {
+          "name": "AURIO Platform",
+          "background": "linear-gradient(135deg, #3a1c71 0%, #d76d77 100%)",
+          "description": {
+            "es": [
+              "Actué como IT Analyst y posteriormente como Project Manager en el desarrollo de AURIO.",
+              "Diseñé la UI/UX del proyecto en Figma y coordiné tareas en JIRA con equipos de diseño y negocio.",
+              "Documenté procesos técnicos y de comunicación interdepartamental bajo metodología Agile.",
+              "Colaboré en la integración de módulos de interacción para usuarios B2C."
+            ],
+            "en": [
+              "Worked as IT Analyst and later as Project Manager for the AURIO platform.",
+              "Designed the project’s UI/UX in Figma and coordinated Agile sprints using JIRA.",
+              "Documented technical and communication processes across design and business teams.",
+              "Contributed to user interaction module integration for B2C users."
+            ]
+          },
+          "technologies": ["Figma", "JIRA", "UI/UX", "Project Management"],
+          "links": {
+            "demo": "https://www.figma.com/proto/0hIKnaHvvDHAuLYc3P508A/Aurio-Prototipes?page-id=0%3A1&node-id=2298-6359&p=f&viewport=599%2C105%2C0.02&t=R7EDaeN1rt83QYr0-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=2298%3A6359"
+          }
+        },
+        {
+          "name": "AURIO Business",
+          "background": "linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)",
+          "description": {
+            "es": [
+              "Plataforma B2B derivada del proyecto AURIO para gestión de proveedores y clientes.",
+              "Actué como Project Manager, gestionando la UI/UX en Figma y tareas en JIRA.",
+              "Diseñé flujos de interacción y documentación técnica para integración con módulos de negocio.",
+              "Permitía a proveedores compartir catálogos y material de marketing de forma automatizada."
+            ],
+            "en": [
+              "B2B platform derived from the AURIO project for supplier and client management.",
+              "Worked as Project Manager handling UI/UX in Figma and project tracking in JIRA.",
+              "Designed interaction flows and technical documentation for business integration.",
+              "Enabled suppliers to share product catalogs and marketing materials automatically."
+            ]
+          },
+          "technologies": ["Figma", "JIRA", "UI/UX", "Project Management"],
+          "links": {
+            "demo": "https://www.figma.com/proto/0hIKnaHvvDHAuLYc3P508A/Aurio-Prototipes?page-id=0%3A1&node-id=805-2774&p=f&viewport=599%2C105%2C0.02&t=R7EDaeN1rt83QYr0-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=805%3A2774"
+          }
+        }
+      ]
+    }
+  ]
+}

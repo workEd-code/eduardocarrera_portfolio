@@ -1,0 +1,150 @@
+.cv-section {
+  margin-bottom: 0.8rem;
+}
+
+.cv-section h3 {
+  color: var(--primary-color, #4a1e8c);
+  border-bottom: 1px solid var(--primary-color, #4a1e8c);
+  padding-bottom: 0.2rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.section-content {
+  font-size: 0.8rem;
+  line-height: 1.2;
+}
+
+/* Summary */
+.summary-content {
+  text-align: justify;
+}
+
+.summary-content p {
+  margin-bottom: 0.4rem;
+}
+
+.summary-content strong {
+  color: var(--primary-color, #4a1e8c);
+}
+
+/* Experience & Education */
+.experience-item,
+.education-item,
+.achievements-item {
+  margin-bottom: 0.6rem;
+  page-break-inside: avoid;
+}
+
+.item-header {
+  margin-bottom: 0.2rem;
+}
+
+.item-title {
+  font-weight: 600;
+  color: var(--primary-color, #4a1e8c);
+  font-size: 0.9rem;
+}
+
+.item-meta {
+  color: #000000;
+  font-size: 0.75rem;
+  margin: 0.1rem 0;
+}
+
+.item-subtitle {
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 0.1rem;
+  font-size: 0.8rem;
+}
+
+.item-url {
+  font-size: 0.7rem;
+}
+
+.item-url a {
+  color: #333;
+  text-decoration: underline;
+}
+
+.item-content {
+  margin-top: 0.2rem;
+  font-size: 0.75rem;
+}
+
+.item-content ul {
+  padding-left: 1rem;
+  margin: 0.2rem 0;
+}
+
+.item-content li {
+  margin-bottom: 0.1rem;
+}
+
+.item-content strong {
+  color: var(--primary-color, #4a1e8c);
+}
+
+/* Achievements */
+.achievements-item h4 {
+  color: var(--primary-color, #4a1e8c);
+  font-size: 0.9rem;
+  margin-bottom: 0.2rem;
+}
+
+/* Languages */
+.language-item {
+  margin-bottom: 0.2rem;
+  font-size: 0.8rem;
+}
+
+.language-item strong {
+  color: var(--primary-color, #4a1e8c);
+}
+
+/* Skills & Tools */
+.skills-category {
+  margin-bottom: 0.5rem;
+}
+
+.skills-category h4 {
+  color: var(--primary-color, #4a1e8c);
+  margin-bottom: 0.2rem;
+  font-size: 0.9rem;
+}
+
+.keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.keyword {
+  background: #f0f0f0;
+  padding: 0.1rem 0.5rem;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  border-left: 2px solid var(--primary-color, #4a1e8c);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cv-section h3 {
+    font-size: 0.9rem;
+  }
+  
+  .item-title {
+    font-size: 0.85rem;
+  }
+  
+  .keywords {
+    gap: 0.2rem;
+  }
+  
+  .keyword {
+    padding: 0.1rem 0.4rem;
+    font-size: 0.65rem;
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "basics": {
+    "name": "Eduardo Carrera",
+    "headline": "Full Stack Developer | Project Manager | Especialista en APIs y Metodologías Ágiles",
+    "email": "wrkedc@gmail.com",
+    "phone": "+52 614 100 7581",
+    "location": "Chihuahua, Chih.",
+    "url": {
+      "label": "www.worked-code.github.io/eduardocarrera_portfolio/",
+      "href": "https://worked-code.github.io/eduardocarrera_portfolio/"
+    },
+    "picture": {
+      "url": "https://storage.rxresu.me/cmhy24o8r16wwx57wo1ff1h42/pictures/coafa0ugsstcp7i56pqqnbwx.jpg",
+      "hidden": true
+    }
+  },
+  "sections": {
+    "summary": {
+      "name": "RESUMEN",
+      "visible": true,
+      "content": "<p>Profesional en <strong>Tecnologías de la Información </strong>especializado en <strong>desarrollo de software multiplataforma</strong>, con experiencia en <strong>gestión ágil de proyectos, backend/frontend, integración de APIs, IA y mantenimiento de sistemas.</strong></p><p>Liderazgo de iniciativas de <strong>automatización, CRM y dashboards aplicando Scrum</strong>, optimizando procesos y fomentando entornos colaborativos.</p><p>Destaco por mi enfoque en optimización tecnológica, aprendizaje continuo y resultados medibles, buscando contribuir en equipos que integren <strong>Python, JavaScript, Node.js, IA y bases de datos SQL</strong>.</p>"
+    },
+    "education": {
+      "name": "EDUCACIÓN",
+      "visible": true,
+      "items": [
+        {
+          "institution": "Universidad Tecnológica de Chihuahua",
+          "studyType": "TSU",
+          "area": "Tecnologías de la Información | Desarrollo de Software Multiplataforma",
+          "date": "2019 - 2023"
+        },
+        {
+          "institution": "TripleTen",
+          "studyType": "BootCamp",
+          "area": "Análisis de Datos con Python",
+          "date": "2025 - Present"
+        }
+      ]
+    },
+    "experience": {
+      "name": "EXPERIENCIA",
+      "visible": true,
+      "items": [
+        {
+          "company": "ProCom",
+          "position": "Desarrollador Full Stack | IA y Dashboards Personalizados",
+          "location": "Chihuahua",
+          "date": "2025 – Present",
+          "summary": "<ul><li>Desarrollar paneles de control y <strong>CRM personalizados </strong>utilizando <strong>JavaScript, SQL y Python </strong>para mejorar los informes operativos</li><li>Implementar modelos de <strong>IA </strong>para <strong>optimizar los tiempos de entrega y la calidad del software</strong></li><li>Documentar las entregas semanales y mantener la trazabilidad del desarrollo bajo <strong>Scrum</strong></li><li>Integrar <strong>API RESTful </strong>con <strong>PostgreSQL y Node.js </strong>para ampliar la funcionalidad del <strong>CRM</strong></li><li>Diseñar pruebas unitarias automatizadas con <strong>Postman </strong>para validar las integraciones</li><li>Diseñar la <strong>arquitectura de frameworks y prompts </strong>para un <strong>agente de IA conversacional</strong>, integrando la <strong>API </strong>de <strong>WhatsApp </strong>para obtener respuestas inteligentes y flujos de servicio automatizados</li></ul>",
+          "url": "https://wwww.procom2000.com.mx/"
+        },
+        {
+          "company": "Baldan Group",
+          "position": "Project Manager Técnico | Mantenimiento y Soporte Nacional",
+          "location": "Mexico City",
+          "date": "2022 - 2024",
+          "summary": "<ul><li>Gestionar la <strong>comunicación con clientes</strong>, asegurando soporte técnico oportuno</li><li>Coordinar <strong>equipos multidisciplinarios</strong> y brindar soporte a contabilidad y ventas</li><li>Estandarizar <strong>documentación técnica en Jira y Excel</strong>, detectando cuellos de botella y proponiendo soluciones escalables</li><li>Elaborar <strong>reportes en inglés </strong>y participar en reuniones bilaterales para proponer <strong>mejoras en procesos y comunicación técnica</strong></li></ul>",
+          "url": "https://www.baldangroup.com/"
+        },
+        {
+          "company": "Aurio & Drácula Studio",
+          "position": "Scrum Project Manager | Desarrollo de CRM y Marketing",
+          "location": "Mexico City",
+          "date": "2021 - 2024",
+          "summary": "<ul><li>Coordinar proyectos de desarrollo bajo <strong>Scrum</strong>, mejorando la comunicación y productividad del equipo</li><li>Desarrollar y mantener <strong>sitios web con HTML, Wix, Squarespace y WordPress</strong>, asegurando diseño adaptable</li><li>Crear <strong>prototipos de AURIO</strong> <strong>UI/UX </strong>en <strong>Figma</strong></li><li>Diseñar e implementar un <strong>CRM integrado con ventas y marketing</strong></li><li>Integrar <strong>servicios REST </strong>y monitorear métricas de desempeño con herramientas de gestión</li></ul>",
+          "url": "https://www.dracula.mx/"
+        },
+        {
+          "company": "Grupo Faisán",
+          "position": "Desarrollador | Prototipos Electrónicos",
+          "location": "Chihuahua",
+          "date": "2020 - 2021",
+          "summary": "<ul><li>Programar microcontroladores <strong>Arduino y ESP32 </strong>usando <strong>C/C++ </strong>para proyectos de IoT</li><li>Desarrollar <strong>prototipos electrónicos innovadores</strong>, incluyendo un espejo inteligente funcional</li></ul>"
+        }
+      ]
+    },
+    "languages": {
+      "name": "IDIOMAS",
+      "visible": true,
+      "items": [
+        {
+          "name": "Español",
+          "description": "Nativo"
+        },
+        {
+          "name": "Inglés",
+          "description": "Intermedio | B2"
+        }
+      ]
+    },
+    "skills": {
+      "name": "HABILIDADES",
+      "visible": true,
+      "items": [
+        {
+          "name": "Aptitudes",
+          "keywords": [
+            "Liderazgo",
+            "Pensamiento Analítico",
+            "Trabajo en Equipo",
+            "Resiliencia",
+            "Comunicación Efectiva",
+            "Adaptabilidad",
+            "Aprendizaje Continuo",
+            "Orientación a Resultados",
+            "Gestión del Tiempo"
+          ]
+        },
+        {
+          "name": "Habilidades Técnicas",
+          "keywords": [
+            "Desarrollo de Software Multiplataforma",
+            "Desarrollo Backend y Frontend",
+            "Diseño de Bases de Datos Relacionales",
+            "Análisis de Requerimientos",
+            "Gestión de Proyectos bajo Scrum",
+            "Diagramas de Flujo",
+            "Pruebas Unitarias",
+            "Documentación Técnica",
+            "Optimización de Procesos Tecnológicos"
+          ]
+        }
+      ]
+    },
+    "tools": {
+      "name": "HERRAMIENTAS",
+      "visible": true,
+      "keywords": [
+        "JavaScript",
+        "TypeScript",
+        "Python",
+        "Node.js",
+        "Nest.js",
+        "React",
+        "SQL",
+        "PostgreSQL",
+        "MySQL",
+        "Docker",
+        "AWS Services",
+        "API Gateway",
+        "CI/CD Pipelines",
+        "Pytest",
+        "Unit Testing Frameworks",
+        "Jira",
+        "Postman",
+        "Github",
+        "Notion",
+        "Microsoft Office 365",
+        "G-Suite"
+      ]
+    },
+    "achievements": {
+      "name": "LOGROS",
+      "visible": true,
+      "items": [
+        {
+          "name": "Optimización de Soporte Nacional y Recuperación de Inversión en BALDAN",
+          "summary": "Dirección de un <strong>equipo de 4 técnicos en +4 ciudades</strong>, implementando soluciones de mantenimiento y soporte que impulsaron ventas clave y <strong>recuperaron </strong>más de <strong>$16M</strong> en cartera pendiente"
+        },
+        {
+          "name": "Optimización de Procesos con IA y Automatización en PROCOM",
+          "summary": "Implementación de flujos de <strong>investigación y desarrollo automatizados con IA, reduciendo costos en +20% </strong>y mejorando la productividad del equipo"
+        },
+        {
+          "name": "Automatización de Gestión de Inventario en PROCOM",
+          "summary": "Desarrollo de <strong>2 aplicaciones internas </strong>con escaneo de códigos, eliminando errores en el flujo de almacenamiento y <strong>evitando pérdidas operativas</strong>"
+        },
+        {
+          "name": "Coordinación de Equipos Multidisciplinarios en AURIO & DRÁCULA STUDIO",
+          "summary": "Gestión de la <strong>comunicación </strong>entre áreas de business, design y development, aplicando <strong>Scrum</strong> en <strong>Jira</strong> para garantizar una ejecución ágil y colaborativa"
+        },
+        {
+          "name": "Gestión Ágil de Proyectos en GRUPO FAISÁN",
+          "summary": "Liderazgo de equipo de 3 personas aplicando <strong>Scrum</strong> para desarrollar <strong>APIs enlazadas con Alexa y Google Home</strong>, integrando el <strong>servicio de almacenamiento en la nube</strong> para guardar fotos y archivos"
+        }
+      ]
+    }
+  },
+  "layout": [
+    ["summary", "achievements",  "experience"],
+    ["languages", "education", "skills", "tools"]
+  ]
+}

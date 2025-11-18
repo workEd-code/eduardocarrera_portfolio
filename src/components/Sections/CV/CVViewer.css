@@ -1,0 +1,651 @@
+.cv-viewer-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.cv-navigation {
+  margin-bottom: 1rem;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  color: var(--text-primary);
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  transition: var(--transition);
+  border: 1px solid transparent;
+}
+
+.back-button:hover {
+  background: var(--accent-color);
+  color: #000;
+  border-color: var(--accent-color);
+}
+
+.cv-viewer {
+  background: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  transform-origin: top center;
+  font-family: 'Lato', Arial, sans-serif !important;
+}
+
+/* Zoom levels */
+.cv-viewer.zoom-100 { transform: scale(1); }
+.cv-viewer.zoom-90 { transform: scale(0.9); }
+.cv-viewer.zoom-80 { transform: scale(0.8); }
+.cv-viewer.zoom-110 { transform: scale(1.1); }
+.cv-viewer.zoom-120 { transform: scale(1.2); }
+
+.cv-content {
+  padding: 1.5rem;
+  color: #333;
+  font-family: 'Lato', Arial, sans-serif !important;
+  line-height: 1.3;
+}
+
+.cv-basics {
+  text-align: left;
+  margin-bottom: 1rem;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.cv-basics h1 {
+  color: var(--primary-color, #4a1e8c);
+  font-size: 1.8rem;
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+}
+
+.headline {
+  color: var(--primary-color, #4a1e8c);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  font-size: 0.8rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.contact-item i {
+  color: var(--primary-color, #4a1e8c);
+  font-size: 0.8rem;
+  width: 14px;
+  text-align: center;
+}
+
+.contact-item a {
+  color: #333;
+  text-decoration: underline;
+}
+
+.cv-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+}
+
+.cv-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+/* Temas de color para vista navegador */
+.cv-viewer[data-theme="default"] {
+  --primary-color: #4a1e8c;
+}
+
+.cv-viewer[data-theme="gray"] {
+  --primary-color: #2d3748;
+}
+
+.cv-viewer[data-theme="blue"] {
+  --primary-color: #1e3a8a;
+}
+
+.cv-viewer[data-theme="green"] {
+  --primary-color: #065f46;
+}
+
+.cv-viewer[data-theme="pink"] {
+  --primary-color: #831843;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cv-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .cv-basics h1 {
+    font-size: 1.5rem;
+  }
+  
+  .cv-viewer.zoom-120,
+  .cv-viewer.zoom-110,
+  .cv-viewer.zoom-100,
+  .cv-viewer.zoom-90,
+  .cv-viewer.zoom-80 {
+    transform: none !important;
+    margin: 0 1rem;
+  }
+}
+
+.cv-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   ESTILOS PARA VERSIÓN A4 PDF OCULTA
+   ========================================================================== */
+
+.cv-a4-pdf {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+  width: 210mm !important;
+  height: 297mm !important;
+  background: white !important;
+  z-index: -1000 !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  display: none !important;
+}
+
+/* Estilos base para el contenido A4 - MÁRGENES REDUCIDOS A 2px */
+.cv-a4-pdf .cv-content-a4 {
+  width: 100% !important;
+  height: 100% !important;
+  padding: 20px 30px !important; /* Reducido de 45px 50px 35px 50px a solo 2px */
+  background: white !important;
+  color: #000000 !important;
+  font-size: 12px !important;
+  line-height: 1.2 !important;
+  font-family: 'Lato', Arial, sans-serif !important;
+  box-sizing: border-box !important;
+}
+
+/* Layout para PDF */
+.cv-a4-pdf .cv-content-a4 .cv-layout {
+  display: grid !important;
+  grid-template-columns: 2fr 1fr !important;
+  gap: 10px !important; /* Reducido de 15px */
+}
+
+/* Header para PDF - SIN LÍNEA DIVISORA */
+.cv-a4-pdf .cv-content-a4 .cv-basics {
+  text-align: left !important;
+  margin-bottom: 15px !important; /* Reducido de 20px */
+  padding-bottom: 0 !important; /* Eliminado padding bottom */
+  border-bottom: none !important; /* ELIMINADA LÍNEA DIVISORA */
+}
+
+.cv-a4-pdf .cv-content-a4 .cv-basics h1 {
+  font-size: 22px !important;
+  margin-bottom: 3px !important; /* Reducido de 5px */
+  line-height: 1.1 !important;
+  font-weight: 700 !important;
+}
+
+.cv-a4-pdf .cv-content-a4 .headline {
+  font-size: 14px !important;
+  margin-bottom: 8px !important; /* Reducido de 10px */
+  font-weight: 600 !important;
+  line-height: 1.1 !important;
+}
+
+.cv-a4-pdf .cv-content-a4 .contact-info {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important; /* Reducido de 10px */
+  font-size: 11px !important;
+  line-height: 1 !important;
+}
+
+.cv-a4-pdf .cv-content-a4 .contact-item i {
+  font-size: 10px !important;
+  width: 12px !important;
+}
+
+/* Secciones para PDF */
+.cv-a4-pdf .cv-content-a4 .cv-section {
+  margin-bottom: 10px !important; /* Reducido de 12px */
+}
+
+.cv-a4-pdf .cv-content-a4 .cv-section h3 {
+  font-size: 14px !important;
+  border-bottom: 1px solid !important;
+  padding-bottom: 2px !important; /* Reducido de 3px */
+  margin-bottom: 4px !important; /* Reducido de 6px */
+  font-weight: 600 !important;
+  line-height: 1.1 !important;
+}
+
+.cv-a4-pdf .cv-content-a4 .section-content {
+  font-size: 11px !important;
+  line-height: 1.2 !important;
+}
+
+/* Items para PDF */
+.cv-a4-pdf .cv-content-a4 .experience-item,
+.cv-a4-pdf .cv-content-a4 .education-item,
+.cv-a4-pdf .cv-content-a4 .achievements-item {
+  margin-bottom: 6px !important; /* Reducido de 8px */
+}
+
+.cv-a4-pdf .cv-content-a4 .item-title {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  margin-bottom: 1px !important; /* Reducido de 2px */
+  line-height: 1.1 !important;
+}
+
+.cv-a4-pdf .cv-content-a4 .item-meta {
+  font-size: 10px !important;
+  color: #000000 !important;
+  margin: 0.5px 0 !important; /* Reducido de 1px */
+  line-height: 1.1 !important;
+}
+
+.cv-a4-pdf .cv-content-a4 .item-content {
+  font-size: 10px !important;
+  line-height: 1.2 !important;
+  margin-top: 2px !important; /* Reducido de 3px */
+}
+
+.cv-a4-pdf .cv-content-a4 .item-content ul {
+  padding-left: 12px !important; /* Reducido de 15px */
+  margin: 2px 0 !important; /* Reducido de 3px */
+}
+
+.cv-a4-pdf .cv-content-a4 .item-content li {
+  margin-bottom: 1px !important; /* Reducido de 2px */
+  line-height: 1.2 !important;
+}
+
+/* Habilidades y keywords para PDF */
+.cv-a4-pdf .cv-content-a4 .keywords {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 4px !important; /* Reducido de 5px */
+}
+
+.cv-a4-pdf .cv-content-a4 .keyword {
+  background: #f5f5f5 !important;
+  padding: 1px 4px !important; /* Reducido de 2px 6px */
+  border-radius: 6px !important; /* Reducido de 8px */
+  font-size: 9px !important;
+  border-left: 2px solid !important;
+  line-height: 1 !important;
+}
+
+/* Summary para PDF */
+.cv-a4-pdf .cv-content-a4 .summary-content {
+  font-size: 11px !important;
+  line-height: 1.2 !important;
+  text-align: justify !important;
+}
+
+.cv-a4-pdf .cv-content-a4 .summary-content p {
+  margin-bottom: 3px !important; /* Reducido de 5px */
+  line-height: 1.2 !important;
+}
+
+.cv-a4-pdf .cv-content-a4 .summary-content strong,
+.cv-a4-pdf .cv-content-a4 .item-content strong {
+  font-weight: 700 !important;
+}
+
+/* Logros para PDF */
+.cv-a4-pdf .cv-content-a4 .achievements-item h4 {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  margin-bottom: 2px !important; /* Reducido de 3px */
+  line-height: 1.1 !important;
+}
+
+/* Idiomas para PDF */
+.cv-a4-pdf .cv-content-a4 .language-item {
+  font-size: 11px !important;
+  margin-bottom: 2px !important; /* Reducido de 3px */
+  line-height: 1.2 !important;
+}
+
+.cv-a4-pdf .cv-content-a4 .language-item strong {
+  font-weight: 600 !important;
+}
+
+/* Skills para PDF */
+.cv-a4-pdf .cv-content-a4 .skills-category {
+  margin-bottom: 6px !important; /* Reducido de 8px */
+}
+
+.cv-a4-pdf .cv-content-a4 .skills-category h4 {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  margin-bottom: 2px !important; /* Reducido de 3px */
+  line-height: 1.1 !important;
+}
+
+/* ==========================================================================
+   TEMAS DE COLOR PARA VERSIÓN A4 PDF
+   ========================================================================== */
+
+/* Tema Default (Morado) */
+.cv-a4-pdf[data-theme="default"] .cv-content-a4 .cv-basics h1,
+.cv-a4-pdf[data-theme="default"] .cv-content-a4 .headline,
+.cv-a4-pdf[data-theme="default"] .cv-content-a4 .cv-section h3,
+.cv-a4-pdf[data-theme="default"] .cv-content-a4 .item-title,
+.cv-a4-pdf[data-theme="default"] .cv-content-a4 .achievements-item h4,
+.cv-a4-pdf[data-theme="default"] .cv-content-a4 .skills-category h4,
+.cv-a4-pdf[data-theme="default"] .cv-content-a4 .language-item strong,
+.cv-a4-pdf[data-theme="default"] .cv-content-a4 .item-content strong,
+.cv-a4-pdf[data-theme="default"] .cv-content-a4 .summary-content strong,
+.cv-a4-pdf[data-theme="default"] .cv-content-a4 .contact-item i {
+  color: #4a1e8c !important;
+}
+
+.cv-a4-pdf[data-theme="default"] .cv-content-a4 .cv-section h3,
+.cv-a4-pdf[data-theme="default"] .cv-content-a4 .keyword {
+  border-color: #4a1e8c !important;
+}
+
+/* Tema Gray */
+.cv-a4-pdf[data-theme="gray"] .cv-content-a4 .cv-basics h1,
+.cv-a4-pdf[data-theme="gray"] .cv-content-a4 .headline,
+.cv-a4-pdf[data-theme="gray"] .cv-content-a4 .cv-section h3,
+.cv-a4-pdf[data-theme="gray"] .cv-content-a4 .item-title,
+.cv-a4-pdf[data-theme="gray"] .cv-content-a4 .achievements-item h4,
+.cv-a4-pdf[data-theme="gray"] .cv-content-a4 .skills-category h4,
+.cv-a4-pdf[data-theme="gray"] .cv-content-a4 .language-item strong,
+.cv-a4-pdf[data-theme="gray"] .cv-content-a4 .item-content strong,
+.cv-a4-pdf[data-theme="gray"] .cv-content-a4 .summary-content strong,
+.cv-a4-pdf[data-theme="gray"] .cv-content-a4 .contact-item i {
+  color: #2d3748 !important;
+}
+
+.cv-a4-pdf[data-theme="gray"] .cv-content-a4 .cv-section h3,
+.cv-a4-pdf[data-theme="gray"] .cv-content-a4 .keyword {
+  border-color: #2d3748 !important;
+}
+
+/* Tema Blue */
+.cv-a4-pdf[data-theme="blue"] .cv-content-a4 .cv-basics h1,
+.cv-a4-pdf[data-theme="blue"] .cv-content-a4 .headline,
+.cv-a4-pdf[data-theme="blue"] .cv-content-a4 .cv-section h3,
+.cv-a4-pdf[data-theme="blue"] .cv-content-a4 .item-title,
+.cv-a4-pdf[data-theme="blue"] .cv-content-a4 .achievements-item h4,
+.cv-a4-pdf[data-theme="blue"] .cv-content-a4 .skills-category h4,
+.cv-a4-pdf[data-theme="blue"] .cv-content-a4 .language-item strong,
+.cv-a4-pdf[data-theme="blue"] .cv-content-a4 .item-content strong,
+.cv-a4-pdf[data-theme="blue"] .cv-content-a4 .summary-content strong,
+.cv-a4-pdf[data-theme="blue"] .cv-content-a4 .contact-item i {
+  color: #1e3a8a !important;
+}
+
+.cv-a4-pdf[data-theme="blue"] .cv-content-a4 .cv-section h3,
+.cv-a4-pdf[data-theme="blue"] .cv-content-a4 .keyword {
+  border-color: #1e3a8a !important;
+}
+
+/* Tema Green */
+.cv-a4-pdf[data-theme="green"] .cv-content-a4 .cv-basics h1,
+.cv-a4-pdf[data-theme="green"] .cv-content-a4 .headline,
+.cv-a4-pdf[data-theme="green"] .cv-content-a4 .cv-section h3,
+.cv-a4-pdf[data-theme="green"] .cv-content-a4 .item-title,
+.cv-a4-pdf[data-theme="green"] .cv-content-a4 .achievements-item h4,
+.cv-a4-pdf[data-theme="green"] .cv-content-a4 .skills-category h4,
+.cv-a4-pdf[data-theme="green"] .cv-content-a4 .language-item strong,
+.cv-a4-pdf[data-theme="green"] .cv-content-a4 .item-content strong,
+.cv-a4-pdf[data-theme="green"] .cv-content-a4 .summary-content strong,
+.cv-a4-pdf[data-theme="green"] .cv-content-a4 .contact-item i {
+  color: #065f46 !important;
+}
+
+.cv-a4-pdf[data-theme="green"] .cv-content-a4 .cv-section h3,
+.cv-a4-pdf[data-theme="green"] .cv-content-a4 .keyword {
+  border-color: #065f46 !important;
+}
+
+/* Tema Pink */
+.cv-a4-pdf[data-theme="pink"] .cv-content-a4 .cv-basics h1,
+.cv-a4-pdf[data-theme="pink"] .cv-content-a4 .headline,
+.cv-a4-pdf[data-theme="pink"] .cv-content-a4 .cv-section h3,
+.cv-a4-pdf[data-theme="pink"] .cv-content-a4 .item-title,
+.cv-a4-pdf[data-theme="pink"] .cv-content-a4 .achievements-item h4,
+.cv-a4-pdf[data-theme="pink"] .cv-content-a4 .skills-category h4,
+.cv-a4-pdf[data-theme="pink"] .cv-content-a4 .language-item strong,
+.cv-a4-pdf[data-theme="pink"] .cv-content-a4 .item-content strong,
+.cv-a4-pdf[data-theme="pink"] .cv-content-a4 .summary-content strong,
+.cv-a4-pdf[data-theme="pink"] .cv-content-a4 .contact-item i {
+  color: #831843 !important;
+}
+
+.cv-a4-pdf[data-theme="pink"] .cv-content-a4 .cv-section h3,
+.cv-a4-pdf[data-theme="pink"] .cv-content-a4 .keyword {
+  border-color: #831843 !important;
+}
+
+/* ==========================================================================
+   ESTILOS ADICIONALES PARA IMPRESIÓN Y COMPATIBILIDAD
+   ========================================================================== */
+
+/* Estilos específicos para PDF */
+@media print {
+  .cv-viewer-container {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .cv-navigation,
+  .cv-controls {
+    display: none !important;
+  }
+
+  .cv-viewer {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    transform: none !important;
+    width: 210mm !important;
+    min-height: 297mm !important;
+  }
+
+  .cv-content {
+    padding: 15mm !important;
+    width: 210mm !important;
+    min-height: 297mm !important;
+  }
+}
+
+/* Para generación de PDF con html2canvas */
+.cv-content-pdf {
+  width: 210mm !important;
+  min-height: 297mm !important;
+  padding: 15mm !important;
+  background: white !important;
+  font-family: 'Lato', Arial, sans-serif !important;
+}
+
+/* Estilos específicos para PDF - Forzar versión desktop */
+.pdf-version {
+  width: 794px !important;
+  min-height: 1123px !important;
+  background: white !important;
+  transform: none !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  z-index: 10000 !important;
+}
+
+.pdf-version .cv-content {
+  width: 100% !important;
+  padding: 40px !important;
+  background: white !important;
+  color: #000000 !important;
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+}
+
+.pdf-version .cv-layout {
+  display: grid !important;
+  grid-template-columns: 2fr 1fr !important;
+  gap: 20px !important;
+}
+
+.pdf-version .cv-basics {
+  text-align: left !important;
+  margin-bottom: 30px !important;
+}
+
+.pdf-version .cv-basics h1 {
+  font-size: 28px !important;
+  margin-bottom: 10px !important;
+}
+
+.pdf-version .headline {
+  font-size: 16px !important;
+  margin-bottom: 15px !important;
+}
+
+.pdf-version .contact-info {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 15px !important;
+  font-size: 12px !important;
+}
+
+.pdf-version .cv-section {
+  margin-bottom: 20px !important;
+}
+
+.pdf-version .cv-section h3 {
+  font-size: 16px !important;
+  border-bottom: 2px solid !important;
+  padding-bottom: 5px !important;
+  margin-bottom: 10px !important;
+}
+
+.pdf-version .section-content {
+  font-size: 12px !important;
+  line-height: 1.4 !important;
+}
+
+.pdf-version .item-title {
+  font-size: 13px !important;
+  font-weight: bold !important;
+}
+
+.pdf-version .item-meta {
+  font-size: 11px !important;
+  color: #000000 !important;
+}
+
+.pdf-version .item-content {
+  font-size: 11px !important;
+}
+
+.pdf-version .keywords {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+}
+
+.pdf-version .keyword {
+  background: #f5f5f5 !important;
+  padding: 4px 8px !important;
+  border-radius: 12px !important;
+  font-size: 10px !important;
+  border-left: 3px solid !important;
+}
+
+/* Ocultar elementos que no deben aparecer en PDF */
+.pdf-version .cv-navigation,
+.pdf-version .cv-controls {
+  display: none !important;
+}
+
+/* Asegurar que no hay scrollbars */
+.pdf-version {
+  overflow: visible !important;
+}
+
+/* Temas para versión PDF antigua */
+.pdf-version[data-theme="default"] .cv-basics h1,
+.pdf-version[data-theme="default"] .headline,
+.pdf-version[data-theme="default"] .cv-section h3,
+.pdf-version[data-theme="default"] .item-title,
+.pdf-version[data-theme="default"] .keyword {
+  color: #4a1e8c !important;
+  border-color: #4a1e8c !important;
+}
+
+.pdf-version[data-theme="gray"] .cv-basics h1,
+.pdf-version[data-theme="gray"] .headline,
+.pdf-version[data-theme="gray"] .cv-section h3,
+.pdf-version[data-theme="gray"] .item-title,
+.pdf-version[data-theme="gray"] .keyword {
+  color: #2d3748 !important;
+  border-color: #2d3748 !important;
+}
+
+.pdf-version[data-theme="blue"] .cv-basics h1,
+.pdf-version[data-theme="blue"] .headline,
+.pdf-version[data-theme="blue"] .cv-section h3,
+.pdf-version[data-theme="blue"] .item-title,
+.pdf-version[data-theme="blue"] .keyword {
+  color: #1e3a8a !important;
+  border-color: #1e3a8a !important;
+}
+
+.pdf-version[data-theme="green"] .cv-basics h1,
+.pdf-version[data-theme="green"] .headline,
+.pdf-version[data-theme="green"] .cv-section h3,
+.pdf-version[data-theme="green"] .item-title,
+.pdf-version[data-theme="green"] .keyword {
+  color: #065f46 !important;
+  border-color: #065f46 !important;
+}
+
+.pdf-version[data-theme="pink"] .cv-basics h1,
+.pdf-version[data-theme="pink"] .headline,
+.pdf-version[data-theme="pink"] .cv-section h3,
+.pdf-version[data-theme="pink"] .item-title,
+.pdf-version[data-theme="pink"] .keyword {
+  color: #831843 !important;
+  border-color: #831843 !important;
+}
+
