@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/eduardocarrera_portfolio/static/css/main.bed5d6f8.css",
-    "main.js": "/eduardocarrera_portfolio/static/js/main.fb909e68.js",
+    "main.css": "/eduardocarrera_portfolio/static/css/main.6344054b.css",
+    "main.js": "/eduardocarrera_portfolio/static/js/main.65fc22dd.js",
     "static/js/977.2b4f2603.chunk.js": "/eduardocarrera_portfolio/static/js/977.2b4f2603.chunk.js",
     "static/js/455.e8d0a022.chunk.js": "/eduardocarrera_portfolio/static/js/455.e8d0a022.chunk.js",
     "static/js/453.c58b98ce.chunk.js": "/eduardocarrera_portfolio/static/js/453.c58b98ce.chunk.js",
     "index.html": "/eduardocarrera_portfolio/index.html",
-    "main.bed5d6f8.css.map": "/eduardocarrera_portfolio/static/css/main.bed5d6f8.css.map",
-    "main.fb909e68.js.map": "/eduardocarrera_portfolio/static/js/main.fb909e68.js.map",
+    "main.6344054b.css.map": "/eduardocarrera_portfolio/static/css/main.6344054b.css.map",
+    "main.65fc22dd.js.map": "/eduardocarrera_portfolio/static/js/main.65fc22dd.js.map",
     "977.2b4f2603.chunk.js.map": "/eduardocarrera_portfolio/static/js/977.2b4f2603.chunk.js.map",
     "455.e8d0a022.chunk.js.map": "/eduardocarrera_portfolio/static/js/455.e8d0a022.chunk.js.map",
     "453.c58b98ce.chunk.js.map": "/eduardocarrera_portfolio/static/js/453.c58b98ce.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bed5d6f8.css",
-    "static/js/main.fb909e68.js"
+    "static/css/main.6344054b.css",
+    "static/js/main.65fc22dd.js"
   ]
 }
