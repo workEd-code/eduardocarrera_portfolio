@@ -4,7 +4,7 @@ import LanguageSwitcher from '../UI/LanguageSwitcher';
 import './Header.css';
 
 const Header = () => {
-  const { t } = useLanguage();
+  const { t } = useLanguage();  // ← ¡¡ESTO ES LO IMPORTANTE!!
 
   return (
     <header className="header">
