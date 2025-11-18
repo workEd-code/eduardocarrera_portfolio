@@ -1,8 +1,11 @@
-import React from 'react';
 import { useLanguage } from '../../../context/LanguageContext';
 import './FloatingCategories.css';
 
-const FloatingCategories = ({ categories, onCategoryClick, activeCategory }) => {
+const FloatingCategories = ({
+  categories,
+  onCategoryClick,
+  activeCategory,
+}) => {
   const { t } = useLanguage();
 
   return (
@@ -16,9 +19,7 @@ const FloatingCategories = ({ categories, onCategoryClick, activeCategory }) => 
           <div className="floating-icon">
             <img src={category.icon} alt={category.id} />
           </div>
-          <div className="category-bubble">
-            {t(`${category.id}`)}
-          </div>
+          <div className="category-bubble">{t(`${category.id}`)}</div>
         </div>
       ))}
     </div>

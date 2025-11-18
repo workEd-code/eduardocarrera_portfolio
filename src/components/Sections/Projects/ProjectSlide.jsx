@@ -1,22 +1,20 @@
-import React from 'react';
 import './ProjectSlide.css';
 
-const ProjectSlide = ({ project, category, language, isFirst }) => {
-  // console.log('Rendering project:', project.name);
-  // console.log('Category:', category);
-  
+const ProjectSlide = ({ project, language, isFirst }) => {
+
   if (!project) {
     return <div className="project-slide">Project data missing</div>;
   }
 
-  const description = project.description?.[language] || project.description?.en || [];
+  const description =
+    project.description?.[language] || project.description?.en || [];
   const links = project.links || {};
 
   return (
-    <div 
+    <div
       className={`project-slide ${isFirst ? 'first-slide' : ''}`}
-      style={{ 
-        '--project-background': project.background 
+      style={{
+        '--project-background': project.background,
       }}
     >
       <div className="project-slide-content">
@@ -24,7 +22,7 @@ const ProjectSlide = ({ project, category, language, isFirst }) => {
           <span className="project-icon">▶</span>
           {project.name}
         </h3>
-        
+
         <div className="project-description">
           <ul className="description-list">
             {description.map((desc, index) => (
@@ -37,7 +35,7 @@ const ProjectSlide = ({ project, category, language, isFirst }) => {
 
         {project.technologies && project.technologies.length > 0 && (
           <div className="project-tech">
-            {project.technologies.map(tech => (
+            {project.technologies.map((tech) => (
               <span key={tech} className="tech-tag">
                 {tech}
               </span>
@@ -48,10 +46,10 @@ const ProjectSlide = ({ project, category, language, isFirst }) => {
         {Object.keys(links).length > 0 && (
           <div className="project-links">
             {links.website && (
-              <a 
-                href={links.website} 
+              <a
+                href={links.website}
                 className="project-link"
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <span className="link-icon">🌐</span>
@@ -61,10 +59,10 @@ const ProjectSlide = ({ project, category, language, isFirst }) => {
               </a>
             )}
             {links.demo && (
-              <a 
-                href={links.demo} 
+              <a
+                href={links.demo}
                 className="project-link"
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <span className="link-icon">🔍</span>
@@ -74,10 +72,10 @@ const ProjectSlide = ({ project, category, language, isFirst }) => {
               </a>
             )}
             {links.code && (
-              <a 
-                href={links.code} 
+              <a
+                href={links.code}
                 className="project-link"
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <span className="link-icon">💻</span>

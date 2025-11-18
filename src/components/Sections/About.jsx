@@ -1,4 +1,3 @@
-import React from 'react';
 import { useLanguage } from '../../context/LanguageContext';
 import './About.css';
 
@@ -10,9 +9,9 @@ const About = () => {
       <div className="profile">
         <div className="profile-image-container">
           <div className="profile-image">
-            <img 
-              src="/eduardocarrera_portfolio/assets/img/profile.png" 
-              alt="Eduardo Carrera" 
+            <img
+              src="/eduardocarrera_portfolio/assets/img/profile.png"
+              alt="Eduardo Carrera"
               className="protected-image"
             />
           </div>
@@ -27,25 +26,47 @@ const About = () => {
           <div className="contact-buttons">
             <a href="mailto:wrkedc@gmail.com" className="btn contact-btn">
               <div className="btn-icon">
-                <img src="/eduardocarrera_portfolio/assets/img/icons/icon-email.svg" alt="Email" />
+                <img
+                  src="/eduardocarrera_portfolio/assets/img/icons/icon-email.svg"
+                  alt="Email"
+                />
               </div>
               <span>{t('about.contact')}</span>
             </a>
-            <a href="https://wa.me/526141007581" className="btn contact-btn" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://wa.me/526141007581"
+              className="btn contact-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div className="btn-icon">
-                <img src="/eduardocarrera_portfolio/assets/img/icons/icon-whatsapp.svg" alt="WhatsApp" />
+                <img
+                  src="/eduardocarrera_portfolio/assets/img/icons/icon-whatsapp.svg"
+                  alt="WhatsApp"
+                />
               </div>
               <span>{t('about.contact')}</span>
             </a>
-            <a href="https://www.linkedin.com/in/eduardo-carrera-dev" className="btn contact-btn" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.linkedin.com/in/eduardo-carrera-dev"
+              className="btn contact-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div className="btn-icon">
-                <img src="/eduardocarrera_portfolio/assets/img/icons/icon-linkedin.svg" alt="LinkedIn" />
+                <img
+                  src="/eduardocarrera_portfolio/assets/img/icons/icon-linkedin.svg"
+                  alt="LinkedIn"
+                />
               </div>
               <span>{t('about.linkedin')}</span>
             </a>
             <a href="/eduardocarrera_portfolio/cv" className="btn contact-btn">
               <div className="btn-icon">
-                <img src="/eduardocarrera_portfolio/assets/img/icons/icon-download.svg" alt="CV" />
+                <img
+                  src="/eduardocarrera_portfolio/assets/img/icons/icon-download.svg"
+                  alt="CV"
+                />
               </div>
               <span>{t('about.download')}</span>
             </a>

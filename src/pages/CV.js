@@ -1,4 +1,3 @@
-import React from 'react';
 import CVViewer from '../components/Sections/CV/CVViewer';
 
 const CV = () => {

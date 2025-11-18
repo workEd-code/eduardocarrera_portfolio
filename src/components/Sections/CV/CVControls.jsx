@@ -1,8 +1,15 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { generatePDF } from '../../../utils/pdfGenerator';
 import './CVControls.css';
 
-const CVControls = ({ zoom, setZoom, theme, setTheme, language, pdfElementRef }) => {
+const CVControls = ({
+  zoom,
+  setZoom,
+  theme,
+  setTheme,
+  language,
+  pdfElementRef,
+}) => {
   const [isGeneratingPDF, setIsGeneratingPDF] = useState(false);
   const zoomLevels = [80, 100, 120];
   const themes = [
@@ -10,25 +17,30 @@ const CVControls = ({ zoom, setZoom, theme, setTheme, language, pdfElementRef })
     { id: 'gray', name: 'Gray', color: '#2d3748' },
     { id: 'blue', name: 'Blue', color: '#1e3a8a' },
     { id: 'green', name: 'Green', color: '#065f46' },
-    { id: 'pink', name: 'Pink', color: '#831843' }
+    { id: 'pink', name: 'Pink', color: '#831843' },
   ];
 
   const handleDownloadPDF = async () => {
-    if (isGeneratingPDF) return;
-    
+    if (isGeneratingPDF) {
+      return;
+    }
+
     setIsGeneratingPDF(true);
-    
+
     try {
       // Usar la referencia del elemento A4
       const element = pdfElementRef.current;
-      
+
       if (!element) {
         throw new Error('CV PDF element not found');
       }
 
-      console.log('PDF Element found with theme:', element.getAttribute('data-theme'));
+      console.log(
+        'PDF Element found with theme:',
+        element.getAttribute('data-theme')
+      );
       const filename = `Curriculum_Eduardo_Carrera_${language}`;
-      
+
       await generatePDF(element, filename, theme);
     } catch (error) {
       console.error('Error generating PDF:', error);
@@ -43,7 +55,7 @@ const CVControls = ({ zoom, setZoom, theme, setTheme, language, pdfElementRef })
       <div className="control-group">
         <label>Zoom:</label>
         <div className="zoom-controls">
-          {zoomLevels.map(level => (
+          {zoomLevels.map((level) => (
             <button
               key={level}
               className={`zoom-btn ${zoom === level ? 'active' : ''}`}
@@ -58,7 +70,7 @@ const CVControls = ({ zoom, setZoom, theme, setTheme, language, pdfElementRef })
       <div className="control-group">
         <label>Theme:</label>
         <div className="theme-controls">
-          {themes.map(themeOption => (
+          {themes.map((themeOption) => (
             <button
               key={themeOption.id}
               className={`theme-btn ${theme === themeOption.id ? 'active' : ''}`}
@@ -70,14 +82,14 @@ const CVControls = ({ zoom, setZoom, theme, setTheme, language, pdfElementRef })
         </div>
       </div>
 
-      <button 
-        className="download-btn" 
+      <button
+        className="download-btn"
         onClick={handleDownloadPDF}
         disabled={isGeneratingPDF}
       >
-        <img 
-          src="/eduardocarrera_portfolio/assets/img/icons/icon-download.svg" 
-          alt="PDF" 
+        <img
+          src="/eduardocarrera_portfolio/assets/img/icons/icon-download.svg"
+          alt="PDF"
           className="download-icon"
         />
         {isGeneratingPDF ? 'Generating...' : 'PDF'}

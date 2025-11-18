@@ -25,34 +25,42 @@ const ProjectsContainer = () => {
   }, []);
 
   // Función para obtener el índice del primer proyecto de una categoría
-  const getFirstProjectIndex = useCallback((categoryId) => {
-    let currentIndex = 0;
-    for (const category of categories) {
-      if (category.id === categoryId) {
-        return currentIndex;
+  const getFirstProjectIndex = useCallback(
+    (categoryId) => {
+      let currentIndex = 0;
+      for (const category of categories) {
+        if (category.id === categoryId) {
+          return currentIndex;
+        }
+        currentIndex += category.projects.length;
       }
-      currentIndex += category.projects.length;
-    }
-    return 0;
-  }, [categories]);
+      return 0;
+    },
+    [categories]
+  );
 
   // Función para obtener la categoría del proyecto activo
-  const getCategoryByProjectIndex = useCallback((index) => {
-    let currentIndex = 0;
-    for (const category of categories) {
-      const categoryLength = category.projects.length;
-      if (index >= currentIndex && index < currentIndex + categoryLength) {
-        return category.id;
+  const getCategoryByProjectIndex = useCallback(
+    (index) => {
+      let currentIndex = 0;
+      for (const category of categories) {
+        const categoryLength = category.projects.length;
+        if (index >= currentIndex && index < currentIndex + categoryLength) {
+          return category.id;
+        }
+        currentIndex += categoryLength;
       }
-      currentIndex += categoryLength;
-    }
-    return categories[0]?.id || '';
-  }, [categories]);
+      return categories[0]?.id || '';
+    },
+    [categories]
+  );
 
   // Manejar scroll
   useEffect(() => {
     const container = containerRef.current;
-    if (!container) return;
+    if (!container) {
+      return;
+    }
 
     const handleScroll = () => {
       // Calcular progreso
@@ -66,8 +74,11 @@ const ProjectsContainer = () => {
       projectSlides.forEach((slide, index) => {
         const rect = slide.getBoundingClientRect();
         const containerRect = container.getBoundingClientRect();
-        
-        if (rect.top <= containerRect.top + 100 && rect.bottom >= containerRect.bottom - 100) {
+
+        if (
+          rect.top <= containerRect.top + 100 &&
+          rect.bottom >= containerRect.bottom - 100
+        ) {
           const newCategory = getCategoryByProjectIndex(index);
           setActiveCategory(newCategory);
           slide.classList.add('active');
@@ -78,32 +89,37 @@ const ProjectsContainer = () => {
     };
 
     container.addEventListener('scroll', handleScroll);
-    
+
     // Trigger inicial para establecer categoría activa
     handleScroll();
-    
+
     return () => container.removeEventListener('scroll', handleScroll);
   }, [categories, getCategoryByProjectIndex]);
 
   const scrollToProject = (index) => {
     const container = containerRef.current;
-    if (!container) return;
+    if (!container) {
+      return;
+    }
 
     const projectSlides = container.querySelectorAll('.project-slide');
     if (projectSlides[index]) {
-      projectSlides[index].scrollIntoView({ 
+      projectSlides[index].scrollIntoView({
         behavior: 'smooth',
-        block: 'start'
+        block: 'start',
       });
     }
   };
 
   // Nueva función para manejar clic en categorías
-  const handleCategoryClick = useCallback((categoryId) => {
-    const firstProjectIndex = getFirstProjectIndex(categoryId);
-    setActiveCategory(categoryId);
-    scrollToProject(firstProjectIndex);
-  }, [getFirstProjectIndex]);
+  const handleCategoryClick = useCallback(
+    (categoryId) => {
+      const firstProjectIndex = getFirstProjectIndex(categoryId);
+      setActiveCategory(categoryId);
+      scrollToProject(firstProjectIndex);
+    },
+    [getFirstProjectIndex]
+  );
 
   if (!categories || categories.length === 0) {
     return (
@@ -116,14 +132,14 @@ const ProjectsContainer = () => {
   return (
     <section className="projects-scroll-section">
       {/* Navegación por categorías */}
-      <FloatingCategories 
-        categories={categories} 
+      <FloatingCategories
+        categories={categories}
         onCategoryClick={handleCategoryClick}
         activeCategory={activeCategory}
       />
-      
-      <MobileCategories 
-        categories={categories} 
+
+      <MobileCategories
+        categories={categories}
         onCategoryClick={handleCategoryClick}
         activeCategory={activeCategory}
       />
@@ -133,9 +149,11 @@ const ProjectsContainer = () => {
         {categories.map((category) =>
           category.projects.map((project, projectIndex) => {
             // Calcular índice global para isFirst
-            const globalIndex = categories
-              .slice(0, categories.indexOf(category))
-              .reduce((acc, cat) => acc + cat.projects.length, 0) + projectIndex;
+            const globalIndex =
+              categories
+                .slice(0, categories.indexOf(category))
+                .reduce((acc, cat) => acc + cat.projects.length, 0) +
+              projectIndex;
 
             return (
               <ProjectSlide

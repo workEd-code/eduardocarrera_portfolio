@@ -8,7 +8,9 @@ export const useScroll = () => {
 
   useEffect(() => {
     const container = containerRef.current;
-    if (!container) return;
+    if (!container) {
+      return;
+    }
 
     const handleScroll = () => {
       // Calcular progreso
@@ -22,11 +24,11 @@ export const useScroll = () => {
       const options = {
         root: container,
         rootMargin: '0px',
-        threshold: 0.6
+        threshold: 0.6,
       };
 
       const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const index = Array.from(projectSlides).indexOf(entry.target);
             setActiveProject(index);
@@ -37,29 +39,31 @@ export const useScroll = () => {
         });
       }, options);
 
-      projectSlides.forEach(slide => observer.observe(slide));
+      projectSlides.forEach((slide) => observer.observe(slide));
 
       return () => observer.disconnect();
     };
 
     container.addEventListener('scroll', handleScroll);
-    
+
     // Inicializar
     handleScroll();
-    
+
     return () => container.removeEventListener('scroll', handleScroll);
   }, []);
 
   const scrollToProject = (index) => {
     const container = containerRef.current;
-    if (!container) return;
+    if (!container) {
+      return;
+    }
 
     const projectSlides = container.querySelectorAll('.project-slide');
     if (projectSlides[index]) {
       setIsScrolling(true);
-      projectSlides[index].scrollIntoView({ 
+      projectSlides[index].scrollIntoView({
         behavior: 'smooth',
-        block: 'start'
+        block: 'start',
       });
       setTimeout(() => setIsScrolling(false), 500);
     }
@@ -70,6 +74,6 @@ export const useScroll = () => {
     scrollProgress,
     containerRef,
     scrollToProject,
-    isScrolling
+    isScrolling,
   };
 };

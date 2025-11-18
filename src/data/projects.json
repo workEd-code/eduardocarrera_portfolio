@@ -129,7 +129,13 @@
               "IoT-focused development with cloud-connected interface."
             ]
           },
-          "technologies": ["ESP32", "Arduino", "Node.js", "Google Home API", "Alexa"],
+          "technologies": [
+            "ESP32",
+            "Arduino",
+            "Node.js",
+            "Google Home API",
+            "Alexa"
+          ],
           "links": {
             "code": "https://github.com/artoria026/SmartMirror2.0"
           }
@@ -138,7 +144,7 @@
     },
     {
       "id": "ai",
-      "icon": "/eduardocarrera_portfolio/assets/img/icons/ai.svg", 
+      "icon": "/eduardocarrera_portfolio/assets/img/icons/ai.svg",
       "projects": [
         {
           "name": "Augmented Reality Educational Project",

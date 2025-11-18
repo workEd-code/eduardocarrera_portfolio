@@ -178,7 +178,7 @@
     }
   },
   "layout": [
-    ["summary", "achievements",  "experience"],
+    ["summary", "achievements", "experience"],
     ["languages", "education", "skills", "tools"]
   ]
 }

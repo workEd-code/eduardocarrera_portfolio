@@ -134,38 +134,62 @@
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1400px) {
-  .about-section { width: 85%; }
+  .about-section {
+    width: 85%;
+  }
 }
 
 @media (max-width: 1200px) {
-  .about-section { width: 90%; }
+  .about-section {
+    width: 90%;
+  }
 }
 
 @media (max-width: 992px) {
-  .about-section { width: 95%; }
-  .profile { gap: 2rem; }
+  .about-section {
+    width: 95%;
+  }
+  .profile {
+    gap: 2rem;
+  }
 }
 
 @media (max-width: 768px) {
-  .about-section { width: 100%; }
-  .profile { 
-    flex-direction: column; 
-    text-align: center; 
-    gap: 2rem; 
+  .about-section {
+    width: 100%;
   }
-  .profile-image-container { width: 100%; }
-  .protected-image { width: 200px; height: 200px; }
-  .profile-info h2 { font-size: 1.5rem; }
-  .contact-buttons { justify-content: center; }
+  .profile {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  .profile-image-container {
+    width: 100%;
+  }
+  .protected-image {
+    width: 200px;
+    height: 200px;
+  }
+  .profile-info h2 {
+    font-size: 1.5rem;
+  }
+  .contact-buttons {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 480px) {
-  .contact-buttons { 
-    flex-direction: column; 
-    align-items: stretch; 
+  .contact-buttons {
+    flex-direction: column;
+    align-items: stretch;
   }
-  .btn { width: 100%; }
-  .protected-image { width: 180px; height: 180px; }
+  .btn {
+    width: 100%;
+  }
+  .protected-image {
+    width: 180px;
+    height: 180px;
+  }
 }
 
 #about-description {

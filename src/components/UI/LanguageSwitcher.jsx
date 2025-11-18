@@ -1,4 +1,3 @@
-import React from 'react';
 import { useLanguage } from '../../context/LanguageContext';
 import './LanguageSwitcher.css';
 
@@ -11,13 +10,13 @@ const LanguageSwitcher = () => {
 
   return (
     <div className="language-switcher">
-      <button 
+      <button
         className={`lang-btn ${currentLanguage === 'en' ? 'active' : ''}`}
         onClick={() => handleLanguageChange('en')}
       >
         EN
       </button>
-      <button 
+      <button
         className={`lang-btn ${currentLanguage === 'es' ? 'active' : ''}`}
         onClick={() => handleLanguageChange('es')}
       >

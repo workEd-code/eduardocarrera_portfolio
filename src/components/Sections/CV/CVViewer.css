@@ -31,7 +31,7 @@
 
 .cv-viewer {
   background: white;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.3s ease;
@@ -40,11 +40,21 @@
 }
 
 /* Zoom levels */
-.cv-viewer.zoom-100 { transform: scale(1); }
-.cv-viewer.zoom-90 { transform: scale(0.9); }
-.cv-viewer.zoom-80 { transform: scale(0.8); }
-.cv-viewer.zoom-110 { transform: scale(1.1); }
-.cv-viewer.zoom-120 { transform: scale(1.2); }
+.cv-viewer.zoom-100 {
+  transform: scale(1);
+}
+.cv-viewer.zoom-90 {
+  transform: scale(0.9);
+}
+.cv-viewer.zoom-80 {
+  transform: scale(0.8);
+}
+.cv-viewer.zoom-110 {
+  transform: scale(1.1);
+}
+.cv-viewer.zoom-120 {
+  transform: scale(1.2);
+}
 
 .cv-content {
   padding: 1.5rem;
@@ -113,23 +123,23 @@
 }
 
 /* Temas de color para vista navegador */
-.cv-viewer[data-theme="default"] {
+.cv-viewer[data-theme='default'] {
   --primary-color: #4a1e8c;
 }
 
-.cv-viewer[data-theme="gray"] {
+.cv-viewer[data-theme='gray'] {
   --primary-color: #2d3748;
 }
 
-.cv-viewer[data-theme="blue"] {
+.cv-viewer[data-theme='blue'] {
   --primary-color: #1e3a8a;
 }
 
-.cv-viewer[data-theme="green"] {
+.cv-viewer[data-theme='green'] {
   --primary-color: #065f46;
 }
 
-.cv-viewer[data-theme="pink"] {
+.cv-viewer[data-theme='pink'] {
   --primary-color: #831843;
 }
 
@@ -138,16 +148,16 @@
   .cv-layout {
     grid-template-columns: 1fr;
   }
-  
+
   .contact-info {
     flex-direction: column;
     align-items: flex-start;
   }
-  
+
   .cv-basics h1 {
     font-size: 1.5rem;
   }
-  
+
   .cv-viewer.zoom-120,
   .cv-viewer.zoom-110,
   .cv-viewer.zoom-100,
@@ -364,97 +374,97 @@
    ========================================================================== */
 
 /* Tema Default (Morado) */
-.cv-a4-pdf[data-theme="default"] .cv-content-a4 .cv-basics h1,
-.cv-a4-pdf[data-theme="default"] .cv-content-a4 .headline,
-.cv-a4-pdf[data-theme="default"] .cv-content-a4 .cv-section h3,
-.cv-a4-pdf[data-theme="default"] .cv-content-a4 .item-title,
-.cv-a4-pdf[data-theme="default"] .cv-content-a4 .achievements-item h4,
-.cv-a4-pdf[data-theme="default"] .cv-content-a4 .skills-category h4,
-.cv-a4-pdf[data-theme="default"] .cv-content-a4 .language-item strong,
-.cv-a4-pdf[data-theme="default"] .cv-content-a4 .item-content strong,
-.cv-a4-pdf[data-theme="default"] .cv-content-a4 .summary-content strong,
-.cv-a4-pdf[data-theme="default"] .cv-content-a4 .contact-item i {
+.cv-a4-pdf[data-theme='default'] .cv-content-a4 .cv-basics h1,
+.cv-a4-pdf[data-theme='default'] .cv-content-a4 .headline,
+.cv-a4-pdf[data-theme='default'] .cv-content-a4 .cv-section h3,
+.cv-a4-pdf[data-theme='default'] .cv-content-a4 .item-title,
+.cv-a4-pdf[data-theme='default'] .cv-content-a4 .achievements-item h4,
+.cv-a4-pdf[data-theme='default'] .cv-content-a4 .skills-category h4,
+.cv-a4-pdf[data-theme='default'] .cv-content-a4 .language-item strong,
+.cv-a4-pdf[data-theme='default'] .cv-content-a4 .item-content strong,
+.cv-a4-pdf[data-theme='default'] .cv-content-a4 .summary-content strong,
+.cv-a4-pdf[data-theme='default'] .cv-content-a4 .contact-item i {
   color: #4a1e8c !important;
 }
 
-.cv-a4-pdf[data-theme="default"] .cv-content-a4 .cv-section h3,
-.cv-a4-pdf[data-theme="default"] .cv-content-a4 .keyword {
+.cv-a4-pdf[data-theme='default'] .cv-content-a4 .cv-section h3,
+.cv-a4-pdf[data-theme='default'] .cv-content-a4 .keyword {
   border-color: #4a1e8c !important;
 }
 
 /* Tema Gray */
-.cv-a4-pdf[data-theme="gray"] .cv-content-a4 .cv-basics h1,
-.cv-a4-pdf[data-theme="gray"] .cv-content-a4 .headline,
-.cv-a4-pdf[data-theme="gray"] .cv-content-a4 .cv-section h3,
-.cv-a4-pdf[data-theme="gray"] .cv-content-a4 .item-title,
-.cv-a4-pdf[data-theme="gray"] .cv-content-a4 .achievements-item h4,
-.cv-a4-pdf[data-theme="gray"] .cv-content-a4 .skills-category h4,
-.cv-a4-pdf[data-theme="gray"] .cv-content-a4 .language-item strong,
-.cv-a4-pdf[data-theme="gray"] .cv-content-a4 .item-content strong,
-.cv-a4-pdf[data-theme="gray"] .cv-content-a4 .summary-content strong,
-.cv-a4-pdf[data-theme="gray"] .cv-content-a4 .contact-item i {
+.cv-a4-pdf[data-theme='gray'] .cv-content-a4 .cv-basics h1,
+.cv-a4-pdf[data-theme='gray'] .cv-content-a4 .headline,
+.cv-a4-pdf[data-theme='gray'] .cv-content-a4 .cv-section h3,
+.cv-a4-pdf[data-theme='gray'] .cv-content-a4 .item-title,
+.cv-a4-pdf[data-theme='gray'] .cv-content-a4 .achievements-item h4,
+.cv-a4-pdf[data-theme='gray'] .cv-content-a4 .skills-category h4,
+.cv-a4-pdf[data-theme='gray'] .cv-content-a4 .language-item strong,
+.cv-a4-pdf[data-theme='gray'] .cv-content-a4 .item-content strong,
+.cv-a4-pdf[data-theme='gray'] .cv-content-a4 .summary-content strong,
+.cv-a4-pdf[data-theme='gray'] .cv-content-a4 .contact-item i {
   color: #2d3748 !important;
 }
 
-.cv-a4-pdf[data-theme="gray"] .cv-content-a4 .cv-section h3,
-.cv-a4-pdf[data-theme="gray"] .cv-content-a4 .keyword {
+.cv-a4-pdf[data-theme='gray'] .cv-content-a4 .cv-section h3,
+.cv-a4-pdf[data-theme='gray'] .cv-content-a4 .keyword {
   border-color: #2d3748 !important;
 }
 
 /* Tema Blue */
-.cv-a4-pdf[data-theme="blue"] .cv-content-a4 .cv-basics h1,
-.cv-a4-pdf[data-theme="blue"] .cv-content-a4 .headline,
-.cv-a4-pdf[data-theme="blue"] .cv-content-a4 .cv-section h3,
-.cv-a4-pdf[data-theme="blue"] .cv-content-a4 .item-title,
-.cv-a4-pdf[data-theme="blue"] .cv-content-a4 .achievements-item h4,
-.cv-a4-pdf[data-theme="blue"] .cv-content-a4 .skills-category h4,
-.cv-a4-pdf[data-theme="blue"] .cv-content-a4 .language-item strong,
-.cv-a4-pdf[data-theme="blue"] .cv-content-a4 .item-content strong,
-.cv-a4-pdf[data-theme="blue"] .cv-content-a4 .summary-content strong,
-.cv-a4-pdf[data-theme="blue"] .cv-content-a4 .contact-item i {
+.cv-a4-pdf[data-theme='blue'] .cv-content-a4 .cv-basics h1,
+.cv-a4-pdf[data-theme='blue'] .cv-content-a4 .headline,
+.cv-a4-pdf[data-theme='blue'] .cv-content-a4 .cv-section h3,
+.cv-a4-pdf[data-theme='blue'] .cv-content-a4 .item-title,
+.cv-a4-pdf[data-theme='blue'] .cv-content-a4 .achievements-item h4,
+.cv-a4-pdf[data-theme='blue'] .cv-content-a4 .skills-category h4,
+.cv-a4-pdf[data-theme='blue'] .cv-content-a4 .language-item strong,
+.cv-a4-pdf[data-theme='blue'] .cv-content-a4 .item-content strong,
+.cv-a4-pdf[data-theme='blue'] .cv-content-a4 .summary-content strong,
+.cv-a4-pdf[data-theme='blue'] .cv-content-a4 .contact-item i {
   color: #1e3a8a !important;
 }
 
-.cv-a4-pdf[data-theme="blue"] .cv-content-a4 .cv-section h3,
-.cv-a4-pdf[data-theme="blue"] .cv-content-a4 .keyword {
+.cv-a4-pdf[data-theme='blue'] .cv-content-a4 .cv-section h3,
+.cv-a4-pdf[data-theme='blue'] .cv-content-a4 .keyword {
   border-color: #1e3a8a !important;
 }
 
 /* Tema Green */
-.cv-a4-pdf[data-theme="green"] .cv-content-a4 .cv-basics h1,
-.cv-a4-pdf[data-theme="green"] .cv-content-a4 .headline,
-.cv-a4-pdf[data-theme="green"] .cv-content-a4 .cv-section h3,
-.cv-a4-pdf[data-theme="green"] .cv-content-a4 .item-title,
-.cv-a4-pdf[data-theme="green"] .cv-content-a4 .achievements-item h4,
-.cv-a4-pdf[data-theme="green"] .cv-content-a4 .skills-category h4,
-.cv-a4-pdf[data-theme="green"] .cv-content-a4 .language-item strong,
-.cv-a4-pdf[data-theme="green"] .cv-content-a4 .item-content strong,
-.cv-a4-pdf[data-theme="green"] .cv-content-a4 .summary-content strong,
-.cv-a4-pdf[data-theme="green"] .cv-content-a4 .contact-item i {
+.cv-a4-pdf[data-theme='green'] .cv-content-a4 .cv-basics h1,
+.cv-a4-pdf[data-theme='green'] .cv-content-a4 .headline,
+.cv-a4-pdf[data-theme='green'] .cv-content-a4 .cv-section h3,
+.cv-a4-pdf[data-theme='green'] .cv-content-a4 .item-title,
+.cv-a4-pdf[data-theme='green'] .cv-content-a4 .achievements-item h4,
+.cv-a4-pdf[data-theme='green'] .cv-content-a4 .skills-category h4,
+.cv-a4-pdf[data-theme='green'] .cv-content-a4 .language-item strong,
+.cv-a4-pdf[data-theme='green'] .cv-content-a4 .item-content strong,
+.cv-a4-pdf[data-theme='green'] .cv-content-a4 .summary-content strong,
+.cv-a4-pdf[data-theme='green'] .cv-content-a4 .contact-item i {
   color: #065f46 !important;
 }
 
-.cv-a4-pdf[data-theme="green"] .cv-content-a4 .cv-section h3,
-.cv-a4-pdf[data-theme="green"] .cv-content-a4 .keyword {
+.cv-a4-pdf[data-theme='green'] .cv-content-a4 .cv-section h3,
+.cv-a4-pdf[data-theme='green'] .cv-content-a4 .keyword {
   border-color: #065f46 !important;
 }
 
 /* Tema Pink */
-.cv-a4-pdf[data-theme="pink"] .cv-content-a4 .cv-basics h1,
-.cv-a4-pdf[data-theme="pink"] .cv-content-a4 .headline,
-.cv-a4-pdf[data-theme="pink"] .cv-content-a4 .cv-section h3,
-.cv-a4-pdf[data-theme="pink"] .cv-content-a4 .item-title,
-.cv-a4-pdf[data-theme="pink"] .cv-content-a4 .achievements-item h4,
-.cv-a4-pdf[data-theme="pink"] .cv-content-a4 .skills-category h4,
-.cv-a4-pdf[data-theme="pink"] .cv-content-a4 .language-item strong,
-.cv-a4-pdf[data-theme="pink"] .cv-content-a4 .item-content strong,
-.cv-a4-pdf[data-theme="pink"] .cv-content-a4 .summary-content strong,
-.cv-a4-pdf[data-theme="pink"] .cv-content-a4 .contact-item i {
+.cv-a4-pdf[data-theme='pink'] .cv-content-a4 .cv-basics h1,
+.cv-a4-pdf[data-theme='pink'] .cv-content-a4 .headline,
+.cv-a4-pdf[data-theme='pink'] .cv-content-a4 .cv-section h3,
+.cv-a4-pdf[data-theme='pink'] .cv-content-a4 .item-title,
+.cv-a4-pdf[data-theme='pink'] .cv-content-a4 .achievements-item h4,
+.cv-a4-pdf[data-theme='pink'] .cv-content-a4 .skills-category h4,
+.cv-a4-pdf[data-theme='pink'] .cv-content-a4 .language-item strong,
+.cv-a4-pdf[data-theme='pink'] .cv-content-a4 .item-content strong,
+.cv-a4-pdf[data-theme='pink'] .cv-content-a4 .summary-content strong,
+.cv-a4-pdf[data-theme='pink'] .cv-content-a4 .contact-item i {
   color: #831843 !important;
 }
 
-.cv-a4-pdf[data-theme="pink"] .cv-content-a4 .cv-section h3,
-.cv-a4-pdf[data-theme="pink"] .cv-content-a4 .keyword {
+.cv-a4-pdf[data-theme='pink'] .cv-content-a4 .cv-section h3,
+.cv-a4-pdf[data-theme='pink'] .cv-content-a4 .keyword {
   border-color: #831843 !important;
 }
 
@@ -604,48 +614,47 @@
 }
 
 /* Temas para versión PDF antigua */
-.pdf-version[data-theme="default"] .cv-basics h1,
-.pdf-version[data-theme="default"] .headline,
-.pdf-version[data-theme="default"] .cv-section h3,
-.pdf-version[data-theme="default"] .item-title,
-.pdf-version[data-theme="default"] .keyword {
+.pdf-version[data-theme='default'] .cv-basics h1,
+.pdf-version[data-theme='default'] .headline,
+.pdf-version[data-theme='default'] .cv-section h3,
+.pdf-version[data-theme='default'] .item-title,
+.pdf-version[data-theme='default'] .keyword {
   color: #4a1e8c !important;
   border-color: #4a1e8c !important;
 }
 
-.pdf-version[data-theme="gray"] .cv-basics h1,
-.pdf-version[data-theme="gray"] .headline,
-.pdf-version[data-theme="gray"] .cv-section h3,
-.pdf-version[data-theme="gray"] .item-title,
-.pdf-version[data-theme="gray"] .keyword {
+.pdf-version[data-theme='gray'] .cv-basics h1,
+.pdf-version[data-theme='gray'] .headline,
+.pdf-version[data-theme='gray'] .cv-section h3,
+.pdf-version[data-theme='gray'] .item-title,
+.pdf-version[data-theme='gray'] .keyword {
   color: #2d3748 !important;
   border-color: #2d3748 !important;
 }
 
-.pdf-version[data-theme="blue"] .cv-basics h1,
-.pdf-version[data-theme="blue"] .headline,
-.pdf-version[data-theme="blue"] .cv-section h3,
-.pdf-version[data-theme="blue"] .item-title,
-.pdf-version[data-theme="blue"] .keyword {
+.pdf-version[data-theme='blue'] .cv-basics h1,
+.pdf-version[data-theme='blue'] .headline,
+.pdf-version[data-theme='blue'] .cv-section h3,
+.pdf-version[data-theme='blue'] .item-title,
+.pdf-version[data-theme='blue'] .keyword {
   color: #1e3a8a !important;
   border-color: #1e3a8a !important;
 }
 
-.pdf-version[data-theme="green"] .cv-basics h1,
-.pdf-version[data-theme="green"] .headline,
-.pdf-version[data-theme="green"] .cv-section h3,
-.pdf-version[data-theme="green"] .item-title,
-.pdf-version[data-theme="green"] .keyword {
+.pdf-version[data-theme='green'] .cv-basics h1,
+.pdf-version[data-theme='green'] .headline,
+.pdf-version[data-theme='green'] .cv-section h3,
+.pdf-version[data-theme='green'] .item-title,
+.pdf-version[data-theme='green'] .keyword {
   color: #065f46 !important;
   border-color: #065f46 !important;
 }
 
-.pdf-version[data-theme="pink"] .cv-basics h1,
-.pdf-version[data-theme="pink"] .headline,
-.pdf-version[data-theme="pink"] .cv-section h3,
-.pdf-version[data-theme="pink"] .item-title,
-.pdf-version[data-theme="pink"] .keyword {
+.pdf-version[data-theme='pink'] .cv-basics h1,
+.pdf-version[data-theme='pink'] .headline,
+.pdf-version[data-theme='pink'] .cv-section h3,
+.pdf-version[data-theme='pink'] .item-title,
+.pdf-version[data-theme='pink'] .keyword {
   color: #831843 !important;
   border-color: #831843 !important;
 }
-

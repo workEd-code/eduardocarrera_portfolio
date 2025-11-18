@@ -1,4 +1,3 @@
-import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import About from '../components/Sections/About';
 import ProjectsContainer from '../components/Sections/Projects/ProjectsContainer';

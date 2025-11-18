@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState, useEffect } from 'react';
 import { getTranslation } from '../data/translations';
 
 const LanguageContext = createContext();
@@ -21,7 +21,7 @@ export const LanguageProvider = ({ children }) => {
   const value = {
     currentLanguage,
     setCurrentLanguage,
-    t
+    t,
   };
 
   return (

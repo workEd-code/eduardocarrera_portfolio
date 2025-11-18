@@ -1,11 +1,10 @@
-import React from 'react';
-import { useLanguage } from '../../context/LanguageContext';
+// import { useLanguage } from '../../context/LanguageContext';
 import LanguageSwitcher from '../UI/LanguageSwitcher';
 import './Header.css';
 
 const Header = () => {
-  const { t } = useLanguage();  // ← ¡¡ESTO ES LO IMPORTANTE!!
-
+// const { t } = useLanguage();   ← comenta o borra esta línea
+  
   return (
     <header className="header">
       <div className="header-content">

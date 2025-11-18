@@ -1,11 +1,12 @@
-import React from 'react';
 import './MobileProgress.css';
 
 const MobileProgress = ({ scrollProgress }) => {
   const handleClick = () => {
     if (scrollProgress >= 99) {
       // Scroll to top
-      const projectsContainer = document.querySelector('.projects-scroll-container');
+      const projectsContainer = document.querySelector(
+        '.projects-scroll-container'
+      );
       if (projectsContainer) {
         projectsContainer.scrollTo({ top: 0, behavior: 'smooth' });
       }
@@ -16,14 +17,14 @@ const MobileProgress = ({ scrollProgress }) => {
   const offset = circumference - (scrollProgress / 100) * circumference;
 
   return (
-    <div 
+    <div
       className={`mobile-progress ${scrollProgress >= 99 ? 'back-to-top' : ''}`}
       onClick={handleClick}
     >
       <div className="progress-circle">
         <svg className="progress-ring" width="60" height="60">
-          <circle 
-            className="progress-ring-circle" 
+          <circle
+            className="progress-ring-circle"
             stroke="var(--accent-color)"
             strokeWidth="4"
             fill="transparent"
@@ -32,7 +33,7 @@ const MobileProgress = ({ scrollProgress }) => {
             cy="30"
             style={{
               strokeDasharray: circumference,
-              strokeDashoffset: offset
+              strokeDashoffset: offset,
             }}
           />
         </svg>

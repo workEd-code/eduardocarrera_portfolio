@@ -1,5 +1,3 @@
 import './GridBackground.css';
 
-const GridBackground = () => (
-  <div className='grid-background'></div>
-);
+// const GridBackground = () => <div className="grid-background" />;

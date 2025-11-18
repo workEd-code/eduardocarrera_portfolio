@@ -26,7 +26,7 @@
   .projects-scroll-section {
     height: calc(100vh - 120px);
   }
-  
+
   .projects-scroll-container {
     scroll-snap-type: y proximity;
   }

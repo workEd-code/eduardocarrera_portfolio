@@ -4,13 +4,13 @@ import jsPDF from 'jspdf';
 export const generatePDF = async (element, filename, theme = 'default') => {
   try {
     console.log('Starting PDF generation with theme:', theme);
-    
+
     // Ocultar controles antes de generar PDF
     const controls = document.querySelector('.cv-controls');
     const navigation = document.querySelector('.cv-navigation');
     const originalControlsDisplay = controls?.style.display;
     const originalNavDisplay = navigation?.style.display;
-    
+
     if (controls) {
       controls.style.display = 'none';
     }
@@ -25,12 +25,12 @@ export const generatePDF = async (element, filename, theme = 'default') => {
       left: element.style.left,
       opacity: element.style.opacity,
       zIndex: element.style.zIndex,
-      display: element.style.display
+      display: element.style.display,
     };
 
     // Aplicar el tema actual al elemento A4
     element.setAttribute('data-theme', theme);
-    
+
     // Hacer visible temporalmente el elemento A4
     element.style.position = 'fixed';
     element.style.top = '0';
@@ -40,7 +40,7 @@ export const generatePDF = async (element, filename, theme = 'default') => {
     element.style.display = 'block';
 
     // Esperar a que se renderice
-    await new Promise(resolve => setTimeout(resolve, 500));
+    await new Promise((resolve) => setTimeout(resolve, 500));
 
     const canvas = await html2canvas(element, {
       scale: 2,
@@ -69,7 +69,7 @@ export const generatePDF = async (element, filename, theme = 'default') => {
           // Aplicar el tema al elemento clonado también
           clonedElement.setAttribute('data-theme', theme);
         }
-        
+
         // Aplicar solo estilos estructurales (sin colores) - MÁRGENES REDUCIDOS
         const styles = `
           .cv-a4-pdf {
@@ -249,44 +249,49 @@ export const generatePDF = async (element, filename, theme = 'default') => {
             line-height: 1.1 !important;
           }
         `;
-        
+
         const styleElement = clonedDoc.createElement('style');
         styleElement.textContent = styles;
         clonedDoc.head.appendChild(styleElement);
-      }
+      },
     });
 
-    console.log('Canvas created with dimensions:', canvas.width, 'x', canvas.height);
+    console.log(
+      'Canvas created with dimensions:',
+      canvas.width,
+      'x',
+      canvas.height
+    );
 
     const imgData = canvas.toDataURL('image/jpeg', 0.95);
-    
+
     // Crear PDF A4
     const pdf = new jsPDF({
       orientation: 'portrait',
       unit: 'mm',
-      format: 'a4'
+      format: 'a4',
     });
 
     const pdfWidth = pdf.internal.pageSize.getWidth();
     const pdfHeight = pdf.internal.pageSize.getHeight();
-    
+
     // Calcular dimensiones para que ocupe toda la página
     const imgWidth = pdfWidth;
     const imgHeight = (canvas.height * pdfWidth) / canvas.width;
-    
+
     console.log('PDF dimensions:', pdfWidth, 'x', pdfHeight);
     console.log('Image dimensions in PDF:', imgWidth, 'x', imgHeight);
 
     // Añadir imagen al PDF
     pdf.addImage(imgData, 'JPEG', 0, 0, imgWidth, imgHeight);
-    
+
     console.log('PDF generated successfully with theme:', theme);
 
     // Guardar PDF
     pdf.save(`${filename}.pdf`);
-    
+
     // Restaurar estilos originales del elemento A4
-    Object.keys(originalStyles).forEach(key => {
+    Object.keys(originalStyles).forEach((key) => {
       element.style[key] = originalStyles[key];
     });
 
@@ -299,10 +304,9 @@ export const generatePDF = async (element, filename, theme = 'default') => {
     }
 
     return true;
-
   } catch (error) {
     console.error('Error generating PDF:', error);
-    
+
     // Restaurar controles en caso de error
     const controls = document.querySelector('.cv-controls');
     const navigation = document.querySelector('.cv-navigation');
@@ -312,7 +316,7 @@ export const generatePDF = async (element, filename, theme = 'default') => {
     if (navigation) {
       navigation.style.display = 'block';
     }
-    
+
     throw error;
   }
 };

@@ -1,16 +1,17 @@
-import React from 'react';
 import './CVSection.css';
 
 const CVSection = ({ section, sectionKey }) => {
-  if (!section.visible) return null;
+  if (!section.visible) {
+    return null;
+  }
 
   const renderContent = () => {
     switch (sectionKey) {
       case 'summary':
         return (
-          <div 
-            className="summary-content" 
-            dangerouslySetInnerHTML={{ __html: section.content }} 
+          <div
+            className="summary-content"
+            dangerouslySetInnerHTML={{ __html: section.content }}
           />
         );
 
@@ -36,7 +37,9 @@ const CVSection = ({ section, sectionKey }) => {
             <h4>{category.name}</h4>
             <div className="keywords">
               {category.keywords.map((keyword, idx) => (
-                <span key={idx} className="keyword">{keyword}</span>
+                <span key={idx} className="keyword">
+                  {keyword}
+                </span>
               ))}
             </div>
           </div>
@@ -46,7 +49,9 @@ const CVSection = ({ section, sectionKey }) => {
         return (
           <div className="keywords">
             {section.keywords.map((tool, index) => (
-              <span key={index} className="keyword">{tool}</span>
+              <span key={index} className="keyword">
+                {tool}
+              </span>
             ))}
           </div>
         );
@@ -74,9 +79,9 @@ const CVSection = ({ section, sectionKey }) => {
                 </div>
               )}
             </div>
-            <div 
-              className="item-content" 
-              dangerouslySetInnerHTML={{ __html: item.summary }} 
+            <div
+              className="item-content"
+              dangerouslySetInnerHTML={{ __html: item.summary }}
             />
           </>
         );
@@ -97,9 +102,9 @@ const CVSection = ({ section, sectionKey }) => {
         return (
           <>
             <h4>{item.name}</h4>
-            <div 
-              className="item-content" 
-              dangerouslySetInnerHTML={{ __html: item.summary }} 
+            <div
+              className="item-content"
+              dangerouslySetInnerHTML={{ __html: item.summary }}
             />
           </>
         );
@@ -112,9 +117,7 @@ const CVSection = ({ section, sectionKey }) => {
   return (
     <section className={`cv-section ${sectionKey}`}>
       <h3>{section.name}</h3>
-      <div className="section-content">
-        {renderContent()}
-      </div>
+      <div className="section-content">{renderContent()}</div>
     </section>
   );
 };
