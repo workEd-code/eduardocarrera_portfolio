@@ -5,65 +5,23 @@
       "icon": "/eduardocarrera_portfolio/assets/img/icons/code.svg",
       "projects": [
         {
-          "name": "ProCom 2000",
-          "background": "linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)",
+          "name": "Neo Earth",
+          "background": "linear-gradient(135deg, #134611 0%, #2d6a4f 100%)",
           "description": {
             "es": [
-              "Primer desarrollo web realizado para la empresa ProCom 2000.",
-              "Diseñé y programé el sitio utilizando HTML, CSS, JS y PHP con Bootstrap.",
-              "Proyecto orientado al aprendizaje de desarrollo web y despliegue de hosting.",
-              "Permitió establecer presencia digital y mejorar el contacto con clientes."
+              "Desarrollé desde cero el sitio de Neo Earth en SquareSpace con funciones personalizadas en JavaScript.",
+              "Implementé secciones interactivas según el diseño visual del cliente.",
+              "Optimicé la estructura SEO y la experiencia de navegación en múltiples idiomas."
             ],
             "en": [
-              "First web development project created for ProCom 2000.",
-              "Designed and coded the site using HTML, CSS, JS, and PHP with Bootstrap.",
-              "Focused on learning web development and deployment best practices.",
-              "Helped establish the company’s digital presence and customer outreach."
+              "Developed Neo Earth’s website from scratch on SquareSpace with custom JavaScript features.",
+              "Implemented interactive sections following the client’s visual design.",
+              "Optimized SEO structure and navigation experience across multiple languages."
             ]
           },
-          "technologies": ["HTML", "CSS", "JavaScript", "PHP", "Bootstrap"],
+          "technologies": ["SquareSpace", "JavaScript", "SEO"],
           "links": {
-            "website": "https://procom2000.com.mx"
-          }
-        },
-        {
-          "name": "Dracula Studio",
-          "background": "linear-gradient(135deg, #2d132c 0%, #811a7e 100%)",
-          "description": {
-            "es": [
-              "Desarrollé el sitio web de Dracula Studio en Wix, siguiendo el diseño del equipo gráfico.",
-              "Implementé funciones de JavaScript para animaciones y comportamiento dinámico.",
-              "Sitio orientado a mostrar servicios creativos y portafolio de la agencia."
-            ],
-            "en": [
-              "Developed the Dracula Studio website in Wix, following the graphic design team’s layout.",
-              "Implemented JavaScript functions for animations and dynamic behavior.",
-              "Website focused on showcasing creative services and portfolio work."
-            ]
-          },
-          "technologies": ["Wix", "JavaScript", "UI Design"],
-          "links": {
-            "website": "https://www.dracula.mx/"
-          }
-        },
-        {
-          "name": "Residencia Guadalupe",
-          "background": "linear-gradient(135deg, #1e3a5f 0%, #0f4c75 100%)",
-          "description": {
-            "es": [
-              "Desarrollé el sitio web de Residencia Guadalupe A.C. en Wix con funciones JS personalizadas.",
-              "Implementé estrategias SEO y redacción de descripciones optimizadas.",
-              "El diseño y la estructura siguen activos tras la renovación del sitio."
-            ],
-            "en": [
-              "Developed the Residencia Guadalupe A.C. website in Wix with custom JS functions.",
-              "Implemented SEO strategies and optimized meta descriptions.",
-              "Design and structure remain active after the latest update."
-            ]
-          },
-          "technologies": ["Wix", "JavaScript", "SEO"],
-          "links": {
-            "website": "https://www.residenciaguadalupe.com/"
+            "website": "https://www.neoearth.fr"
           }
         },
         {
@@ -87,23 +45,65 @@
           }
         },
         {
-          "name": "Neo Earth",
-          "background": "linear-gradient(135deg, #134611 0%, #2d6a4f 100%)",
+          "name": "Residencia Guadalupe",
+          "background": "linear-gradient(135deg, #1e3a5f 0%, #0f4c75 100%)",
           "description": {
             "es": [
-              "Desarrollé desde cero el sitio de Neo Earth en SquareSpace con funciones personalizadas en JavaScript.",
-              "Implementé secciones interactivas según el diseño visual del cliente.",
-              "Optimicé la estructura SEO y la experiencia de navegación en múltiples idiomas."
+              "Desarrollé el sitio web de Residencia Guadalupe A.C. en Wix con funciones JS personalizadas.",
+              "Implementé estrategias SEO y redacción de descripciones optimizadas.",
+              "El diseño y la estructura siguen activos tras la renovación del sitio."
             ],
             "en": [
-              "Developed Neo Earth’s website from scratch on SquareSpace with custom JavaScript features.",
-              "Implemented interactive sections following the client’s visual design.",
-              "Optimized SEO structure and navigation experience across multiple languages."
+              "Developed the Residencia Guadalupe A.C. website in Wix with custom JS functions.",
+              "Implemented SEO strategies and optimized meta descriptions.",
+              "Design and structure remain active after the latest update."
             ]
           },
-          "technologies": ["SquareSpace", "JavaScript", "SEO"],
+          "technologies": ["Wix", "JavaScript", "SEO"],
           "links": {
-            "website": "https://www.neoearth.fr"
+            "website": "https://www.residenciaguadalupe.com/"
+          }
+        },
+        {
+          "name": "Dracula Studio",
+          "background": "linear-gradient(135deg, #2d132c 0%, #811a7e 100%)",
+          "description": {
+            "es": [
+              "Desarrollé el sitio web de Dracula Studio en Wix, siguiendo el diseño del equipo gráfico.",
+              "Implementé funciones de JavaScript para animaciones y comportamiento dinámico.",
+              "Sitio orientado a mostrar servicios creativos y portafolio de la agencia."
+            ],
+            "en": [
+              "Developed the Dracula Studio website in Wix, following the graphic design team’s layout.",
+              "Implemented JavaScript functions for animations and dynamic behavior.",
+              "Website focused on showcasing creative services and portfolio work."
+            ]
+          },
+          "technologies": ["Wix", "JavaScript", "UI Design"],
+          "links": {
+            "website": "https://www.dracula.mx/"
+          }
+        },
+        {
+          "name": "ProCom 2000",
+          "background": "linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)",
+          "description": {
+            "es": [
+              "Primer desarrollo web realizado para la empresa ProCom 2000.",
+              "Diseñé y programé el sitio utilizando HTML, CSS, JS y PHP con Bootstrap.",
+              "Proyecto orientado al aprendizaje de desarrollo web y despliegue de hosting.",
+              "Permitió establecer presencia digital y mejorar el contacto con clientes."
+            ],
+            "en": [
+              "First web development project created for ProCom 2000.",
+              "Designed and coded the site using HTML, CSS, JS, and PHP with Bootstrap.",
+              "Focused on learning web development and deployment best practices.",
+              "Helped establish the company’s digital presence and customer outreach."
+            ]
+          },
+          "technologies": ["HTML", "CSS", "JavaScript", "PHP", "Bootstrap"],
+          "links": {
+            "website": "https://procom2000.com.mx"
           }
         }
       ]
