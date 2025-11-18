@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/eduardocarrera_portfolio/static/css/main.bed5d6f8.css",
+    "main.js": "/eduardocarrera_portfolio/static/js/main.ff4638a2.js",
+    "static/js/977.2b4f2603.chunk.js": "/eduardocarrera_portfolio/static/js/977.2b4f2603.chunk.js",
+    "static/js/455.e8d0a022.chunk.js": "/eduardocarrera_portfolio/static/js/455.e8d0a022.chunk.js",
+    "static/js/453.c58b98ce.chunk.js": "/eduardocarrera_portfolio/static/js/453.c58b98ce.chunk.js",
+    "index.html": "/eduardocarrera_portfolio/index.html",
+    "main.bed5d6f8.css.map": "/eduardocarrera_portfolio/static/css/main.bed5d6f8.css.map",
+    "main.ff4638a2.js.map": "/eduardocarrera_portfolio/static/js/main.ff4638a2.js.map",
+    "977.2b4f2603.chunk.js.map": "/eduardocarrera_portfolio/static/js/977.2b4f2603.chunk.js.map",
+    "455.e8d0a022.chunk.js.map": "/eduardocarrera_portfolio/static/js/455.e8d0a022.chunk.js.map",
+    "453.c58b98ce.chunk.js.map": "/eduardocarrera_portfolio/static/js/453.c58b98ce.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bed5d6f8.css",
+    "static/js/main.ff4638a2.js"
+  ]
+}
