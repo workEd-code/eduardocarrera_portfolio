@@ -10,19 +10,21 @@ const Header = () => {
     <header className="header">
       <div className="header-content">
         <div className="title-section">
-          <h1 className="title">$ <span className="cursor">eduardocarrera_portfolio</span></h1>
+          <h1 className="title">
+            $ <span className="cursor">eduardocarrera_portfolio</span>
+          </h1>
           <div className="subtitle">
-            // Full Stack Developer & IT Specialist
-            <a 
-              href="https://www.linkedin.com/in/eduardo-carrera-dev" 
-              target="_blank" 
+            {/* Full Stack Developer & IT Specialist */}
+            <a
+              href="https://www.linkedin.com/in/eduardo-carrera-dev"
+              target="_blank"
               rel="noopener noreferrer"
               className="header-linkedin"
               title="LinkedIn Profile"
             >
-              <img 
-                src="/eduardocarrera_portfolio/assets/img/icons/icon-linkedin.svg" 
-                alt="LinkedIn" 
+              <img
+                src="/eduardocarrera_portfolio/assets/img/icons/icon-linkedin.svg"
+                alt="LinkedIn"
               />
             </a>
           </div>
