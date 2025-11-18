@@ -1,44 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    
+    <!-- SEO & Meta principal -->
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Eduardo Carrera — Full Stack Developer & IT Specialist. Portfolio personal con proyectos en React, Node.js, WordPress, Wix y más. Especializado en desarrollo web moderno, interfaces interactivas y soluciones digitales creativas."
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
+    <meta
+      name="keywords"
+      content="Eduardo Carrera, Full Stack Developer, React, JavaScript, Node.js, WordPress, portfolio developer, desarrollador web México, frontend developer, backend developer"
+    />
+    <meta name="author" content="Eduardo Carrera" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Redes sociales (Facebook, LinkedIn, WhatsApp, etc.) -->
+    <meta property="og:title" content="Eduardo Carrera | Full Stack Developer & IT Specialist" />
+    <meta property="og:description" content="Portfolio personal — Desarrollo web moderno con React, Node.js, WordPress y soluciones creativas. Proyectos reales, código limpio y diseño impactante." />
+    <meta property="og:image" content="%PUBLIC_URL%/og-image.jpg" />
+    <meta property="og:url" content="https://worked-code.github.io/eduardocarrera_portfolio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_MX" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Eduardo Carrera | Full Stack Developer" />
+    <meta name="twitter:description" content="Portfolio personal — React, Node.js, WordPress, Wix y más." />
+    <meta name="twitter:image" content="%PUBLIC_URL%/og-image.jpg" />
+
+    <!-- Título perfecto para pestaña y Google -->
+    <title>Eduardo Carrera | Full Stack Developer & IT Specialist</title>
+
+    <!-- Favicon y touch icons (recomendado tener estos archivos en public/) -->
+    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png" />
+
+    <!-- Font Awesome (ya lo usas en tu proyecto) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-..."
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Manifest & theme color -->
+    <meta name="theme-color" content="#0d0d0d" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <title>Eduardo Carrera</title>
   </head>
+
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      <div style="text-align:center;padding:40px;font-family:system-ui;background:#111;color:#fff;">
+        <h1>Eduardo Carrera</h1>
+        <p>Por favor, activa JavaScript para ver mi portfolio completo.</p>
+        <p>You need to enable JavaScript to run this app.</p>
+      </div>
+    </noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>
